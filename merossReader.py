@@ -11,15 +11,21 @@ class MerossAnalyzer:
     def analyze_packets(self):
         with PcapReader(self.file_path) as pcap_reader:
             for packet in pcap_reader:
-                if IP in packet and packet[IP].src == self.source_address and packet[IP].dst == self.destination_address:
+                src_mac = packet[Ether].src
+                dst_mac = packet[Ether].dst
+
+                if (src_mac == self.source_address or src_mac == self.destination_address) and (dst_mac == self.source_address or dst_mac == self.destination_address):
                     ethernet_info = {
-                        "src_mac": packet[Ether].src,
-                        "dst_mac": packet[Ether].dst
+                        "src_mac": src_mac,
+                        "dst_mac": dst_mac
                     }
-                    ip_info = {
-                        "src_ip": packet[IP].src,
-                        "dst_ip": packet[IP].dst
-                    }
+
+                    ip_info = {}
+                    if IP in packet:
+                        ip_info = {
+                            "src_ip": packet[IP].src,
+                            "dst_ip": packet[IP].dst
+                        }
 
                     tcp_info = {}
                     if TCP in packet:
@@ -53,8 +59,8 @@ class MerossAnalyzer:
 
 # Usage
 file_path = '2_meross_on_off.pcapng'
-source_address = '10.42.0.14'
-destination_address = '10.42.0.141'
+source_address = 'aa:f9:24:38:27:e1'
+destination_address = '48:e1:e9:3a:3a:b7'
 output_file = 'packet_info.json'
 
 analyzer = MerossAnalyzer(file_path, source_address, destination_address)
