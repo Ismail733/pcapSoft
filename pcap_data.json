@@ -5,8 +5,9 @@
         "destination_mac": "142.250.201.164",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.250.201.164",
-        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https S",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https S",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 60\n  id        = 55258\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x526a\n  src       = 10.215.173.1\n  dst       = 142.250.201.164\n  \\options   \\\n###[ TCP ]### \n     sport     = 38904\n     dport     = https\n     seq       = 1809082920\n     ack       = 0\n     dataofs   = 10\n     reserved  = 0\n     flags     = S\n     window    = 65535\n     chksum    = 0x581d\n     urgptr    = 0\n     options   = [('MSS', 9960), ('SAckOK', b''), ('Timestamp', (3934807035, 0)), ('NOP', None), ('WScale', 10)]\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.619845",
@@ -14,8 +15,9 @@
         "destination_mac": "216.58.214.163",
         "source_ip": "10.215.173.1",
         "destination_ip": "216.58.214.163",
-        "raw1": "IP / TCP 10.215.173.1:34230 > 216.58.214.163:http S",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:34230 > 216.58.214.163:http S",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 60\n  id        = 37203\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x42b2\n  src       = 10.215.173.1\n  dst       = 216.58.214.163\n  \\options   \\\n###[ TCP ]### \n     sport     = 34230\n     dport     = http\n     seq       = 325765399\n     ack       = 0\n     dataofs   = 10\n     reserved  = 0\n     flags     = S\n     window    = 65535\n     chksum    = 0x300\n     urgptr    = 0\n     options   = [('MSS', 9960), ('SAckOK', b''), ('Timestamp', (3623781003, 0)), ('NOP', None), ('WScale', 10)]\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.639724",
@@ -23,8 +25,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "142.250.201.164",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 SA",
-        "raw2": null
+        "summary": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 SA",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 48\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x2a51\n  src       = 142.250.201.164\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = https\n     dport     = 38904\n     seq       = 2011920363\n     ack       = 1809082921\n     dataofs   = 7\n     reserved  = 0\n     flags     = SA\n     window    = 1024\n     chksum    = 0xe5db\n     urgptr    = 0\n     options   = [('MSS', 9960), ('WScale', 10), ('EOL', None)]\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.640000",
@@ -32,8 +35,9 @@
         "destination_mac": "142.250.201.164",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.250.201.164",
-        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https A",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 55259\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x527d\n  src       = 10.215.173.1\n  dst       = 142.250.201.164\n  \\options   \\\n###[ TCP ]### \n     sport     = 38904\n     dport     = https\n     seq       = 1809082921\n     ack       = 2011920364\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 64\n     chksum    = 0x3f94\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.640591",
@@ -41,8 +45,9 @@
         "destination_mac": "142.250.201.164",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.250.201.164",
-        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https A / Raw",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https A / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 552\n  id        = 55260\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x507c\n  src       = 10.215.173.1\n  dst       = 142.250.201.164\n  \\options   \\\n###[ TCP ]### \n     sport     = 38904\n     dport     = https\n     seq       = 1809082921\n     ack       = 2011920364\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 64\n     chksum    = 0x14fa\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x16\\x03\\x01\\x022\\x01\\x00\\x02.\\x03\\x03??\\\\x9c\\\\x99\\\\xedsQg\\\\xbdi\\\\xb4j;\\\\xf9\\r[\\\\xc5;\\x14\\\\x9c\\\\xb6\\\\xfd@\\x18\\\\xc4\\x1bx{\\\\xe3)\\\\xbd\\\\xf9 f\\\\xe8\\x15\\x05s\\\\xb8\\\\\\\\xb0PwG\\\\xe8\\\\x9e%u\\x0b$\\\\xfd\\\\xd6)\\x13\\\\xa1\\\\xaf\\\\xa4\\\\x9f\\x0ee\u025b\\\\xc1\\\\xbe\\\\xd2\\x00\"\\x13\\x01\\x13\\x02\\x13\\x03\\\\xc0+\\\\xc0,\u0329\\\\xc0/\\\\xc00\u0328\\\\xc0\\t\\\\xc0\\n\\\\xc0\\x13\\\\xc0\\x14\\x00\\\\x9c\\x00\\\\x9d\\x00/\\x005\\x01\\x00\\x01\\\\xc3\\x00\\x00\\x00\\x13\\x00\\x11\\x00\\x00\\x0ewww.google.com\\x00\\x17\\x00\\x00\\\\xff\\x01\\x00\\x01\\x00\\x00\\n\\x00\\x08\\x00\\x06\\x00\\x1d\\x00\\x17\\x00\\x18\\x00\\x0b\\x00\\x02\\x01\\x00\\x00#\\x00\\x00\\x00\\x10\\x00\\x0b\\x00\\t\\x08http/1.1\\x00\\x05\\x00\\x05\\x01\\x00\\x00\\x00\\x00\\x00\\r\\x00\\x14\\x00\\x12\\x04\\x03\\x08\\x04\\x04\\x01\\x05\\x03\\x08\\x05\\x05\\x01\\x08\\x06\\x06\\x01\\x02\\x01\\x003\\x00&\\x00$\\x00\\x1d\\x00 I\\x0e\\\\xb7O\\\\x9b\\\\xc1\\\\xebr`E\\\\xe9\\x11.\\\\x8b\\\\xf41\\\\x9fC\\\\x86\\\\x82\\\\xb5\\\\x94\\\\xb3\\x0c\\\\xe7*\\\\x81\\\\xa2fK-|\\x00-\\x00\\x02\\x01\\x01\\x00+\\x00\\t\\x08\\x03\\x04\\x03\\x03\\x03\\x02\\x03\\x01\\x00)\\x01\\x1c\\x00\\\\xf7\\x00\\\\xf1\\x02\\\\xddR4\\\\xe1?x\\\\xe8\\\\xc1\\\\x88\\\\xfa\\\\x8f\\\\xa2\u06c5\\\\xdd\\x02\u06b1\\\\x97)y\\x05\\\\xbe\\\\xa4\\\\x90H~\\x165\\t\\x05[\\\\xe0\\\\xfc\\\\xc0\\\\xa8\\\\x97\\\\xb9\\\\xb4\\x13~\\\\xcb\\x12\\x0e\\\\x92\\\\xf8+\\\\xdeg\\\\xf1\\\\xf3\\\\xe3\\\\xe4\\x02(\\'Y\\\\x87l:\\\\xba\\\\xbb\\\\x95)zM9n\\x04\\\\xbeT\\\\xca\\\\xf2h\\x10\\\\xfa\\x06\\\\x8f\\\\x97\\\\x9d\\\\x95*\u05b6\\x14\\\\xe1\\\\xe7\\\\xc0\\\\xca\\x03\\\\xc0\\\\xab>\\x19\\\\xb1M\\x1c\\\\x8d\\x1em\\\\xa3\\ntJov\\\\xc0\\x16\\x01vq\\x1c\\\\xa8\\\\xbf\\\\x8d\\\\xaeU\\\\x83g\\x1f\\\\xab\\\\xa3*\\\\xe4\\\\xb6\\\\xf0\\\\xd8\\'\\'\\\\xd7\\\\xf5v-\\\\xb1\\\\xe9&W*\"m$v\\x7fW\\\\x97\\\\x90f\\\\x98\\\\x86\\\\xa3\\\\xe1x\\\\x84\\x011\\\\xb0\\\\xccv\\\\xb1\\\\x98\\\\xdeZ\\\\xa4\\\\xa3\\\\xb8<;\\\\x9b[I\\\\xe9\u04bf\\\\xa8\\\\xd0,\\\\xc8\\\\xfd\\\\x8fwbL\\\\x94u\\x1d\\\\xf9m\\x17\\x7fZ\\\\xe8\\\\xc1I\\\\xfe\\\\x95\\\\x89\\t\\\\xdd#\\\\xeb\\x07\\x1f\\\\xa3$\\\\x98\\\\xd9N-\\n\\\\x98\\\\x9b\\\\xca\\r8\\\\x8e2\\x02Z\\x04\\\\xd8s\\x13\\\\xa7\\\\xb3'\n",
+        "payload": "16030102320100022e03033f3f9c99ed735167bd69b46a3bf90d5bc53b149cb6fd4018c41b787be329bdf92066e8150573b85cb0507747e89e25750b24fdd62913a1afa49f0e65c99bc1bed20022130113021303c02bc02ccca9c02fc030cca8c009c00ac013c014009c009d002f0035010001c300000013001100000e7777772e676f6f676c652e636f6d00170000ff01000100000a00080006001d00170018000b00020100002300000010000b000908687474702f312e31000500050100000000000d00140012040308040401050308050501080606010201003300260024001d0020490eb74f9bc1eb726045e9112e8bf4319f438682b594b30ce72a81a2664b2d7c002d00020101002b00090803040303030203010029011c00f700f102dd5234e13f78e8c188fa8fa2db85dd02dab197297905bea490487e163509055be0fcc0a897b9b4137ecb120e92f82bde67f1f3e3e402282759876c3ababb95297a4d396e04be54caf26810fa068f979d952ad6b614e1e7c0ca03c0ab3e19b14d1c8d1e6da30a744a6f76c0160176711ca8bf8dae5583671faba32ae4b6f0d82727d7f5762db1e926572a226d24767f579790669886a3e178840131b0cc76b198de5aa4a3b83c3b9b5b49e9d2bfa8d02cc8fd8f77624c94751df96d177f5ae8c149fe958909dd23eb071fa32498d94e2d0a989bca0d388e32025a04d87313a7b3"
     },
     {
         "timestamp": "1709733203.640746",
@@ -50,8 +55,9 @@
         "destination_mac": "142.250.201.164",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.250.201.164",
-        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 95\n  id        = 55261\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x5244\n  src       = 10.215.173.1\n  dst       = 142.250.201.164\n  \\options   \\\n###[ TCP ]### \n     sport     = 38904\n     dport     = https\n     seq       = 1809083433\n     ack       = 2011920364\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 64\n     chksum    = 0x9a9\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\\\xe8\\\\xa1kY\\\\xfdPAR7\\\\xfc\\\\xf1\\\\xe1v\u0777,\\\\x89}\\\\xb3p\\x00! \\\\x85J\\\\xf6\\x06\\\\xb9\\x00\\\\x9d`\\\\xc5\\\\xd8\\\\xeb\\\\x85\\\\xc5\\x06ll\\\\xd39\\\\x82\\\\xae\\\\xe8^\\\\xf03\\\\x97P3\\\\x95\\\\x9f)\\\\xc8\\\\xdc'\n",
+        "payload": "e8a16b59fd50415237fcf1e176ddb72c897db370002120854af606b9009d60c5d8eb85c5066c6cd33982aee85ef033975033959f29c8dc"
     },
     {
         "timestamp": "1709733203.640904",
@@ -59,8 +65,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "142.250.201.164",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 A",
-        "raw2": null
+        "summary": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x2a59\n  src       = 142.250.201.164\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = https\n     dport     = 38904\n     seq       = 2011920364\n     ack       = 1809083488\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 1023\n     chksum    = 0x399e\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.640957",
@@ -68,8 +75,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "216.58.214.163",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 216.58.214.163:http > 10.215.173.1:34230 SA",
-        "raw2": null
+        "summary": "IP / TCP 216.58.214.163:http > 10.215.173.1:34230 SA",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 48\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0xd411\n  src       = 216.58.214.163\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = http\n     dport     = 34230\n     seq       = 2011920363\n     ack       = 325765400\n     dataofs   = 7\n     reserved  = 0\n     flags     = SA\n     window    = 1024\n     chksum    = 0x9cc4\n     urgptr    = 0\n     options   = [('MSS', 9960), ('WScale', 10), ('EOL', None)]\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.641168",
@@ -77,8 +85,9 @@
         "destination_mac": "216.58.214.163",
         "source_ip": "10.215.173.1",
         "destination_ip": "216.58.214.163",
-        "raw1": "IP / TCP 10.215.173.1:34230 > 216.58.214.163:http A",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:34230 > 216.58.214.163:http A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 37204\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x42c5\n  src       = 10.215.173.1\n  dst       = 216.58.214.163\n  \\options   \\\n###[ TCP ]### \n     sport     = 34230\n     dport     = http\n     seq       = 325765400\n     ack       = 2011920364\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 64\n     chksum    = 0xf67c\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.641375",
@@ -86,8 +95,10 @@
         "destination_mac": "216.58.214.163",
         "source_ip": "10.215.173.1",
         "destination_ip": "216.58.214.163",
-        "raw1": "IP / TCP 10.215.173.1:34230 > 216.58.214.163:http PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:34230 > 216.58.214.163:http PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 267\n  id        = 37205\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x41e1\n  src       = 10.215.173.1\n  dst       = 216.58.214.163\n  \\options   \\\n###[ TCP ]### \n     sport     = 34230\n     dport     = http\n     seq       = 325765400\n     ack       = 2011920364\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 64\n     chksum    = 0x9f23\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = 'GET /generate_204 HTTP/1.1\\r\\nConnection: close\\r\\nUser-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36\\r\\nHost: connectivitycheck.gstatic.com\\r\\nAccept-Encoding: gzip\\r\\n\\r\\n'\n",
+        "payload": "474554202f67656e65726174655f32303420485454502f312e310d0a436f6e6e656374696f6e3a20636c6f73650d0a557365722d4167656e743a204d6f7a696c6c612f352e3020285831313b204c696e7578207838365f363429204170706c655765624b69742f3533372e333620284b48544d4c2c206c696b65204765636b6f29204368726f6d652f36302e302e333131322e3332205361666172692f3533372e33360d0a486f73743a20636f6e6e6563746976697479636865636b2e677374617469632e636f6d0d0a4163636570742d456e636f64696e673a20677a69700d0a0d0a",
+        "google_watch_status": "Google Watch device is connected"
     },
     {
         "timestamp": "1709733203.641528",
@@ -95,8 +106,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "216.58.214.163",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 216.58.214.163:http > 10.215.173.1:34230 A",
-        "raw2": null
+        "summary": "IP / TCP 216.58.214.163:http > 10.215.173.1:34230 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0xd419\n  src       = 216.58.214.163\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = http\n     dport     = 34230\n     seq       = 2011920364\n     ack       = 325765627\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 1023\n     chksum    = 0xf1da\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.679671",
@@ -104,8 +116,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "216.58.214.163",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 216.58.214.163:http > 10.215.173.1:34230 PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 216.58.214.163:http > 10.215.173.1:34230 PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 186\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0xd387\n  src       = 216.58.214.163\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = http\n     dport     = 34230\n     seq       = 2011920364\n     ack       = 325765627\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 1024\n     chksum    = 0x965a\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = 'HTTP/1.1 204 No Content\\r\\nContent-Length: 0\\r\\nCross-Origin-Resource-Policy: cross-origin\\r\\nDate: Wed, 06 Mar 2024 13:53:23 GMT\\r\\nConnection: close\\r\\n\\r\\n'\n",
+        "payload": "485454502f312e3120323034204e6f20436f6e74656e740d0a436f6e74656e742d4c656e6774683a20300d0a43726f73732d4f726967696e2d5265736f757263652d506f6c6963793a2063726f73732d6f726967696e0d0a446174653a205765642c203036204d617220323032342031333a35333a323320474d540d0a436f6e6e656374696f6e3a20636c6f73650d0a0d0a"
     },
     {
         "timestamp": "1709733203.679945",
@@ -113,8 +126,9 @@
         "destination_mac": "216.58.214.163",
         "source_ip": "10.215.173.1",
         "destination_ip": "216.58.214.163",
-        "raw1": "IP / TCP 10.215.173.1:34230 > 216.58.214.163:http A",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:34230 > 216.58.214.163:http A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 37206\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x42c3\n  src       = 10.215.173.1\n  dst       = 216.58.214.163\n  \\options   \\\n###[ TCP ]### \n     sport     = 34230\n     dport     = http\n     seq       = 325765627\n     ack       = 2011920510\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 65\n     chksum    = 0xf506\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.679969",
@@ -122,8 +136,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "142.250.201.164",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 258\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x297f\n  src       = 142.250.201.164\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = https\n     dport     = 38904\n     seq       = 2011920364\n     ack       = 1809083488\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 1024\n     chksum    = 0xec41\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x16\\x03\\x03\\x00\\\\x80\\x02\\x00\\x00|\\x03\\x03\\\\xa2\\\\xe4\\\\x95\\\\xd3V\\\\xb5gt\\\\xe5\\x1dk3&\\\\x9f}0\\\\xbb1aMn\\\\x80\\x1ao\\\\xe2)W\"\\\\x84#\\x0ek f\\\\xe8\\x15\\x05s\\\\xb8\\\\\\\\xb0PwG\\\\xe8\\\\x9e%u\\x0b$\\\\xfd\\\\xd6)\\x13\\\\xa1\\\\xaf\\\\xa4\\\\x9f\\x0ee\u025b\\\\xc1\\\\xbe\\\\xd2\\x13\\x01\\x00\\x004\\x00)\\x00\\x02\\x00\\x00\\x003\\x00$\\x00\\x1d\\x00 \\\\xaa\\\\xc2\\\\xdd\\\\xf4 \\\\xd1U*7\\\\x89}Rz\\x1eN\\x07\\\\xd2\\\\xc5j\\\\x85=R\\\\xd32j\u0707\\\\xf3\\x1b\\\\xa4\\\\x82\\x01\\x00+\\x00\\x02\\x03\\x04\\x14\\x03\\x03\\x00\\x01\\x01\\x17\\x03\\x03\\x00J\\x04\\\\x9b\\x06bw\\\\xa5\\\\x9a-\\\\xa1\\\\xa8i\\\\xe8\\\\xfc\\\\xd2\\\\xf5P\\r\\\\xc9\\\\xd4\\\\xd5\\\\xe6\\\\xe4\\x1a\\\\xe7\u027b\\x06o\\\\xf1\\\\xf1\\\\xee~y\\\\xbaEq^\u03d7s3\\\\xad\\\\xd7s\\\\xd67<\\\\xaa\\\\xb3\\x0e:\\\\x95\\x02_\\\\xe41\\x07\\x03s\\\\xa6\\\\xb6\\\\x99\\\\xf9u\\x06h\\n\\\\xfd5\\\\xa6\\\\x87\\\\xa4H\\\\xbd'\n",
+        "payload": "16030300800200007c0303a2e495d356b56774e51d6b33269f7d30bb31614d6e801a6fe229572284230e6b2066e8150573b85cb0507747e89e25750b24fdd62913a1afa49f0e65c99bc1bed2130100003400290002000000330024001d0020aac2ddf420d1552a37897d527a1e4e07d2c56a853d52d3326adc87f31ba48201002b00020304140303000101170303004a049b066277a59a2da1a869e8fcd2f5500dc9d4d5e6e41ae7c9bb066ff1f1ee7e79ba45715ecf977333add773d6373caab30e3a95025fe431070373a6b699f97506680afd35a687a448bd"
     },
     {
         "timestamp": "1709733203.680126",
@@ -131,8 +146,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "216.58.214.163",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 216.58.214.163:http > 10.215.173.1:34230 FA",
-        "raw2": null
+        "summary": "IP / TCP 216.58.214.163:http > 10.215.173.1:34230 FA",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0xd419\n  src       = 216.58.214.163\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = http\n     dport     = 34230\n     seq       = 2011920510\n     ack       = 325765627\n     dataofs   = 5\n     reserved  = 0\n     flags     = FA\n     window    = 1024\n     chksum    = 0xf146\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.681208",
@@ -140,8 +156,9 @@
         "destination_mac": "142.250.201.164",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.250.201.164",
-        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https A",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 55262\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x527a\n  src       = 10.215.173.1\n  dst       = 142.250.201.164\n  \\options   \\\n###[ TCP ]### \n     sport     = 38904\n     dport     = https\n     seq       = 1809083488\n     ack       = 2011920582\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 65\n     chksum    = 0x3c82\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.681217",
@@ -149,8 +166,9 @@
         "destination_mac": "216.58.214.163",
         "source_ip": "10.215.173.1",
         "destination_ip": "216.58.214.163",
-        "raw1": "IP / TCP 10.215.173.1:34230 > 216.58.214.163:http FA",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:34230 > 216.58.214.163:http FA",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 37207\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x42c2\n  src       = 10.215.173.1\n  dst       = 216.58.214.163\n  \\options   \\\n###[ TCP ]### \n     sport     = 34230\n     dport     = http\n     seq       = 325765627\n     ack       = 2011920511\n     dataofs   = 5\n     reserved  = 0\n     flags     = FA\n     window    = 65\n     chksum    = 0xf504\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.681224",
@@ -158,8 +176,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "216.58.214.163",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 216.58.214.163:http > 10.215.173.1:34230 A",
-        "raw2": null
+        "summary": "IP / TCP 216.58.214.163:http > 10.215.173.1:34230 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0xd419\n  src       = 216.58.214.163\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = http\n     dport     = 34230\n     seq       = 2011920511\n     ack       = 325765628\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 63\n     chksum    = 0xf506\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.937257",
@@ -167,8 +186,9 @@
         "destination_mac": "142.250.201.164",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.250.201.164",
-        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 104\n  id        = 55263\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x5239\n  src       = 10.215.173.1\n  dst       = 142.250.201.164\n  \\options   \\\n###[ TCP ]### \n     sport     = 38904\n     dport     = https\n     seq       = 1809083488\n     ack       = 2011920582\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 65\n     chksum    = 0xf36f\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x14\\x03\\x03\\x00\\x01\\x01\\x17\\x03\\x03\\x005)\\x1e\\\\xfc\\x1d\\\\xf8\\\\x94{\u04d6F\\\\xa5+\\x13\\\\xf8\\\\xe2Ju\\\\xd2\\x00\\\\xf4\\\\xfa1\u05f3f\\\\x9e*\\x0b\\\\xa3\u04f3\\\\xdd\\t\u00a7X\\\\xc7\\x19x\\r\\\\x8e\\\\xf8\\\\xd8\\x05\\\\x88\\\\x8b\u02c8\\\\xc7\\\\xcdG^\\x0c'\n",
+        "payload": "1403030001011703030035291efc1df8947bd39646a52b13f8e24a75d200f4fa31d7b3669e2a0ba3d3b3dd09c2a758c719780d8ef8d805888bcb88c7cd475e0c"
     },
     {
         "timestamp": "1709733203.937565",
@@ -176,8 +196,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "142.250.201.164",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 A",
-        "raw2": null
+        "summary": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x2a59\n  src       = 142.250.201.164\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = https\n     dport     = 38904\n     seq       = 2011920582\n     ack       = 1809083552\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 1023\n     chksum    = 0x3884\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.940460",
@@ -185,8 +206,9 @@
         "destination_mac": "142.250.201.164",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.250.201.164",
-        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 274\n  id        = 55264\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x518e\n  src       = 10.215.173.1\n  dst       = 142.250.201.164\n  \\options   \\\n###[ TCP ]### \n     sport     = 38904\n     dport     = https\n     seq       = 1809083552\n     ack       = 2011920582\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 65\n     chksum    = 0xbf78\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x17\\x03\\x03\\x00\\\\xe5-?\\x1d\\\\xadOmaT\\x12\\\\xd5\\x13\\\\xe9\\\\xe9\\\\xcf!\\\\xa5\\\\xb35\\\\xe4Bm\\x1f\\\\x83\\\\xb3\\\\xae\\\\x81Q\\\\xd0\\\\xd8\\\\xf4!3u\\x01bk\"\\\\x9c\\\\x87\\\\x81e\\\\\\\\x99\\x00^\\\\x98\\\\xb52x\u0151\\\\xef\\\\xaa\\\\xfe\\\\xd7\\\\xf5%;w\u04d4\\\\x9d\\\\xf7\\x11zx\\\\x9e\\\\xa1\\\\x94\\\\xb2\\\\xac7X\\\\xa3\u022cf\\\\x80\\\\xa4.XC\\x14A\\\\x95N\\\\x95\\\\xedX7\\\\xa3v\\\\xe0l\\\\xb3\\\\x81\\x05\u0574\"%\\u0383\\x08\\\\xf47\\\\xdah\\\\xc3o]\\x1b\\\\xba\\\\xb4P\\\\x8f!\\\\xed|\\\\xbdl\\x0blSl\\\\xa9H4\\\\xe8c\\\\xefn\u04eea?J^\\\\xd9\\\\xc3\\\\xe4D5\\\\x90\\\\xdd=\\\\x9b6\\x17$\u021aB\\\\xd5\\x18\\\\xb0\\\\x9a\\x0c\\\\xf7TXDT\\\\xd8o\\x1b\\\\xd5]\\\\xb8G\\x02W\\x1b\\\\xbfq\\\\xa0\\\\xaa \\\\xe3\\\\x81&E\\\\xf5\\\\xac\\\\xe0\\\\xfa\\x1a\\x01\\\\xd4U\\\\xc9.\\\\xc9\\\\xd1\\\\xc1\\\\x8c11N\\\\xba$\\\\xf4ho\\\\xf9\\\\x8b\\x05\\x0f9\\x0c$\\x00\\\\x9e\\x01\\\\xb5H\\\\xf3=\\x12L\\\\xe9\\\\xb8\\u05eb\\\\xaf\\\\xbb\\\\xebn\\\\xed'\n",
+        "payload": "17030300e52d3f1dad4f6d615412d513e9e9cf21a5b335e4426d1f83b3ae8151d0d8f421337501626b229c8781655c99005e98b53278c591efaafed7f5253b77d3949df7117a789ea194b2ac3758a3c8ac6680a42e58431441954e95ed5837a376e06cb38105d5b42225ce8308f437da68c36f5d1bbab4508f21ed7cbd6c0b6c536ca94834e863ef6ed3ae613f4a5ed9c3e4443590dd3d9b361724c89a42d518b09a0cf754584454d86f1bd55db84702571bbf71a0aa20e3812645f5ace0fa1a01d455c92ec9d1c18c31314eba24f4686ff98b050f390c24009e01b548f33d124ce9b8d7abafbbeb6eed"
     },
     {
         "timestamp": "1709733203.940593",
@@ -194,8 +216,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "142.250.201.164",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 A",
-        "raw2": null
+        "summary": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x2a59\n  src       = 142.250.201.164\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = https\n     dport     = 38904\n     seq       = 2011920582\n     ack       = 1809083786\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 1023\n     chksum    = 0x379a\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.966017",
@@ -203,8 +226,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "142.250.201.164",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 829\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x2744\n  src       = 142.250.201.164\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = https\n     dport     = 38904\n     seq       = 2011920582\n     ack       = 1809083786\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 1024\n     chksum    = 0x91bb\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x17\\x03\\x03\\x02/C=\\r\\\\xe6\\x01\\\\xf1\\x12\\\\x987\\\\xd3\\\\xfbh\\\\xf6\\\\xb2\\\\xb9\\\\xe6\\\\xa1r\\\\xf2.L#\\\\x8a\\\\x95\\\\xa0q\\\\x9b\\\\x89^\\\\xbf0\\\\xa9\\\\xfd\\\\xf0o\\x18\"\\\\xb3ge\\\\xde28t\\\\x97!r\\\\xe6\\\\xcdvJ4\\\\xd3\\x7f?i\\\\x83DxDoR\\\\xdc\u055e\\\\xba\\\\xe6k\\\\xcd\\\\xf7\\\\x9bqC*\\\\xb7Yn.{\\x0f(]Ck\\\\xe7(G\\\\F\\\\xc3\\x1b\\\\xe1o\\\\xe8d\\\\xe6\\\\xacd\\r\\\\x85\\\\xeeF\\x01e\\x0cy|:\\x16\\\\xfe\\\\xaa\u0642\\\\xb0\\\\xb1\\\\xb4\\x10 \\\\xefel\\\\xad\\\\xe6\\\\xa9A\\\\xbf\\\\xaf\\\\x84\\x052\\\\xfb\\\\x93\\\\xaf\\\\xf4\\\\xac\u024a*\\\\xa3\\\\x91\\r\\\\x9f\\\\xa0\\\\xe6\\x06e0\\\\x99D1\\\\xabssI\\x0e{\\x05\\\\xaa\\\\xf2\\\\xe2\\\\xeb\\\\xb2 y\\\\xe1\\\\xcb#JQ7\\\\xe3\\\\xf0\\x1c(\\\\xf4\\\\xa0BpKK\\\\xb2n\\\\x8e\\\\xbc\\\\xf3\\\\x95\\\\xe0\\\\x93U{\\\\x8e\\x0c\\\\x95\\\\x8c\\\\xf7\\\\xf8?\\x00\\\\xc2^\\\\x8b\\\\x8cS\\\\x85\\x0b]M\\\\xbe\\x13\\x00\\x17\\\\xbcD\\\\xb6\\\\xe9jIi\\\\xb5\\\\x87\\\\x80\\\\xd9N\\x06\u0640\\\\xe7\\\\xc2-\\\\x93p\\\\x81\\\\xfc\\x0c%1g\\\\xef&\\x11>\\\\xec\\x03q\\\\xe3L$*\\\\xf4\\x19\\\\x83\\\\xe8\\x10k\\\\xf0@\\\\xee\\\\xb9P\\\\xe0\\\\xc7\\x08\u06e5`\\\\xc4{m\\\\xd0\\\\xf0\\\\xfd\\\\xc3g\\\\x95\\\\xf1*\\\\x814r\\\\xdf0\\x12X\\x1d\\\\xa7d\\x01L\\x17\\\\x81\\\\xe7M\\\\xd8\\'\\\\xd0\\\\xec\\x7f\\\\xfe\\x06\\x0c\\x1d\u01c4t\\\\xb5\\\\xcbjD\\\\x85\\\\xa5\\\\x8b\\\\xae\\\\x9a s=\\\\x95\\\\xa7\\\\xce\\x13TI\u00f1\\\\xe2\\\\x98\u065b\\r\\x7f\\\\xa2\\\\xda6\\tBw\\\\xd5\\x1f\\\\xa5KrN\\x0b\\x19Q\\x18\\\\xbd\\\\x84\\\\xaf\\\\xf2\\\\x97H\\\\xe5\\\\xbaE\\\\x9f\u00d4\\\\xff\\\\xfb;\\\\xab\u0689\\\\x9d\\\\xcf\u065c\\\\xf1\\\\xc5\\\\xcf=2\u0464\\\\x97\\\\x83\\x1c\\n\\\\xf87u\\x02V\\x11\\\\xc4\\x12\\\\xba\\\\xcdG|*\\\\xa8d7&\u05a7M\\'\\\\xfa\\\\xb0\\\\x81aJ\\\\x8f\\\\xc6\u03e9\\\\xdeC\\\\xf8\\\\xea\\\\xe5r\u033e,0U\\x1a\\\\x8d\\\\x98MSp\\\\xb2\\\\xaa\\\\xb9<G\\\\x96[\\\\x88\\\\xa6!\\\\xc1,`\\\\x98\\\\xbb\\\\xca{\\\\xbb\\\\x8b\\\\xacR(\\\\xc3\\x04\\\\x94\\x02\\\\xf4,\\'\\\\xf1\\\\xc8\\\\xf0\\x03no\\t\\\\x8f\\\\xfe|\"4\\\\xf6X\\\\xf5\\x17T\\\\xbe\\\\xf38\\x19kx\\x07\\\\xd6b\\\\x9b>\\\\xdemw\\\\xa7\\\\xa6&8Y\\\\xeeL\\\\xe1\u05d9?f\\\\xfc\\\\xb3\\\\x95[\\\\x9e<\\x18l%\\\\xcc\\\\xd0<\\\\xd8e(v\\x1b\\x12v\\\\x8b\\x13\\\\xeb\\\\xf7\\\\xd7==U\\\\xfe\\\\xc7+\\\\x88!\\\\xf1\\\\xe3S\u034b\\\\xac\\\\xa2z\\\\xf8G\\\\x83i(aQ\\\\xa8|aS_V\\\\xa0\\\\xe9*\\\\xbb\\\\xc16\\\\xcbQ\\x17\\x03\\x03\\x00\u0704r2v@N\u036c7\\\\xfb\\\\xf6014\\x06\u07d7\\\\x897\u0273Rv\\\\xd9f\\\\\\x1cI\\x1f\\\\xa4\\\\x9f\\\\x95\\\\xff\\\\xdb=\\x01\\\\xa0J\\\\xa9\\\\xe6\\\\xfe\\\\x94\\x1a\\'!\\\\xa8\\\\x95O\\x03D\\\\xf4\\x08\\\\x8d\\\\x88\\x01m\\\\xf8<\\\\x8a\u0118\\\\xdfv5c &\\\\xd76\\\\xd0\\x0f\u0137\\x1f\\\\xd5\\\\xf6\\x07\\\\xe0R#&\\\\x90\\\\xef4\\x17%\\\\xd8\\\\xe6>\\\\x85\\\\xe9\\\\xe9\\\\xb2\\\\xc6\\\\xd6\\x1a\\\\x9b8Y\\x15X\\\\x9d!\\\\xd4z\\\\x9b\\\\xfa\\\\xaf\\\\x87\\x1e.\uca49\\'.\\r\\\\xeba\\\\xb7\\\\xbb\\\\xe4\\\\x9c[\\x06\\x12\\\\xb7\\\\xccDX\\r\\\\xf1\\x14\\x17\\x17\\\\xec\\\\x83\\\\xc37\\\\x9c\\\\xf2\\\\x95;\\\\x90\\x16.g\\\\xaa\\\\xf3\\\\x88\\\\xb9\\\\xcc\u04ca\\\\xb0\\\\xe0\\\\x96\"\\\\xa0\\x19\\\\x83w\\\\xb0T*\\\\x91\\\\x9d\\x05*\\\\xc6\\x13\\\\xfa[;\\\\xddY\\\\xf3\\\\xa4~\\\\xdb\\\\xe5\\\\xf0\\\\xe7\\x13Li\\x1e\\\\x9f\\\\xe6]yF\\\\x8b\\\\x86\\\\xd6O\\\\xb0#\\\\x97\\\\x91Pm\\\\xael}\\\\x82\\\\x93\\x03\\\\xe4\\\\xfa\\\\x8f\\x1c\\\\x85\\\\xf9M`BN20'\n",
+        "payload": "170303022f433d0de601f1129837d3fb68f6b2b9e6a172f22e4c238a95a0719b895ebf30a9fdf06f1822b36765de323874972172e6cd764a34d37f3f69834478446f52dcd59ebae66bcdf79b71432ab7596e2e7b0f285d436be728475c46c31be16fe864e6ac640d85ee4601650c797c3a16feaad982b0b1b41020ef656cade6a941bfaf840532fb93aff4acc98a2aa3910d9fa0e6066530994431ab7373490e7b05aaf2e2ebb22079e1cb234a5137e3f01c28f4a042704b4bb26e8ebcf395e093557b8e0c958cf7f83f00c25e8b8c53850b5d4dbe130017bc44b6e96a4969b58780d94e06d980e7c22d937081fc0c253167ef26113eec0371e34c242af41983e8106bf040eeb950e0c708dba560c47b6dd0f0fdc36795f12a813472df3012581da764014c1781e74dd827d0ec7ffe060c1dc78474b5cb6a4485a58bae9a20733d95a7ce135449c3b1e298d99b0d7fa2da36094277d51fa54b724e0b195118bd84aff29748e5ba459fc394fffb3babda899dcfd99cf1c5cf3d32d1a497831c0af83775025611c412bacd477c2aa8643726d6a74d27fab081614a8fc6cfa9de43f8eae572ccbe2c30551a8d984d5370b2aab93c47965b88a621c12c6098bbca7bbb8bac5228c3049402f42c27f1c8f0036e6f098ffe7c2234f658f51754bef338196b7807d6629b3ede6d77a7a6263859ee4ce1d7993f66fcb3955b9e3c186c25ccd03cd86528761b12768b13ebf7d73d3d55fec72b8821f1e353cd8baca27af8478369286151a87c61535f56a0e92abbc136cb5117030300dc84723276404ecdac37fbf630313406df978937c9b35276d9665c1c491fa49f95ffdb3d01a04aa9e6fe941a2721a8954f0344f4088d88016df83c8ac498df7635632026d736d00fc4b71fd5f607e052232690ef341725d8e63e85e9e9b2c6d61a9b385915589d21d47a9bfaaf871e2eeca989272e0deb61b7bbe49c5b0612b7cc44580df1141717ec83c3379cf2953b90162e67aaf388b9ccd38ab0e09622a0198377b0542a919d052ac613fa5b3bdd59f3a47edbe5f0e7134c691e9fe65d79468b86d64fb0239791506dae6c7d829303e4fa8f1c85f94d60424e3230"
     },
     {
         "timestamp": "1709733203.966246",
@@ -212,8 +236,9 @@
         "destination_mac": "142.250.201.164",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.250.201.164",
-        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https A",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 55265\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x5277\n  src       = 10.215.173.1\n  dst       = 142.250.201.164\n  \\options   \\\n###[ TCP ]### \n     sport     = 38904\n     dport     = https\n     seq       = 1809083786\n     ack       = 2011921371\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 67\n     chksum    = 0x3841\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.966260",
@@ -221,8 +246,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "142.250.201.164",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 FA",
-        "raw2": null
+        "summary": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 FA",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x2a59\n  src       = 142.250.201.164\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = https\n     dport     = 38904\n     seq       = 2011921371\n     ack       = 1809083786\n     dataofs   = 5\n     reserved  = 0\n     flags     = FA\n     window    = 1024\n     chksum    = 0x3483\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.967420",
@@ -230,8 +256,9 @@
         "destination_mac": "142.250.201.164",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.250.201.164",
-        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https FA",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https FA",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 55266\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x5276\n  src       = 10.215.173.1\n  dst       = 142.250.201.164\n  \\options   \\\n###[ TCP ]### \n     sport     = 38904\n     dport     = https\n     seq       = 1809083786\n     ack       = 2011921372\n     dataofs   = 5\n     reserved  = 0\n     flags     = FA\n     window    = 67\n     chksum    = 0x383f\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733203.967434",
@@ -239,8 +266,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "142.250.201.164",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 A",
-        "raw2": null
+        "summary": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x2a59\n  src       = 142.250.201.164\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = https\n     dport     = 38904\n     seq       = 2011921372\n     ack       = 1809083787\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 63\n     chksum    = 0x3843\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.663011",
@@ -248,8 +276,9 @@
         "destination_mac": "8.8.8.8",
         "source_ip": "10.215.173.1",
         "destination_ip": "8.8.8.8",
-        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 S",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 S",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 60\n  id        = 37790\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0xdf35\n  src       = 10.215.173.1\n  dst       = 8.8.8.8\n  \\options   \\\n###[ TCP ]### \n     sport     = 34190\n     dport     = 853\n     seq       = 2673654887\n     ack       = 0\n     dataofs   = 10\n     reserved  = 0\n     flags     = S\n     window    = 65535\n     chksum    = 0x884\n     urgptr    = 0\n     options   = [('MSS', 9960), ('SAckOK', b''), ('Timestamp', (2394874614, 0)), ('NOP', None), ('WScale', 10)]\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.693649",
@@ -257,8 +286,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "8.8.8.8",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 SA",
-        "raw2": null
+        "summary": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 SA",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 48\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x72e0\n  src       = 8.8.8.8\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = 853\n     dport     = 34190\n     seq       = 2011920363\n     ack       = 2673654888\n     dataofs   = 7\n     reserved  = 0\n     flags     = SA\n     window    = 1024\n     chksum    = 0xb973\n     urgptr    = 0\n     options   = [('MSS', 9960), ('WScale', 10), ('EOL', None)]\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.693814",
@@ -266,8 +296,9 @@
         "destination_mac": "8.8.8.8",
         "source_ip": "10.215.173.1",
         "destination_ip": "8.8.8.8",
-        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 A",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 37791\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0xdf48\n  src       = 10.215.173.1\n  dst       = 8.8.8.8\n  \\options   \\\n###[ TCP ]### \n     sport     = 34190\n     dport     = 853\n     seq       = 2673654888\n     ack       = 2011920364\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 64\n     chksum    = 0x132c\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.694395",
@@ -275,8 +306,9 @@
         "destination_mac": "8.8.8.8",
         "source_ip": "10.215.173.1",
         "destination_ip": "8.8.8.8",
-        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 A / Raw",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 A / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 552\n  id        = 37792\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0xdd47\n  src       = 10.215.173.1\n  dst       = 8.8.8.8\n  \\options   \\\n###[ TCP ]### \n     sport     = 34190\n     dport     = 853\n     seq       = 2673654888\n     ack       = 2011920364\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 64\n     chksum    = 0xb9de\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x16\\x03\\x01\\x02\\x00\\x01\\x00\\x01\\\\xfc\\x03\\x03hk`\\\\x8e\\\\xa0?\\x05-GB\\\\x9b!4O\\\\xfc(C\\x19\\x0e\"\\\\xe5\\\\xdcr\\\\xc0\\\\xe7bk\\\\xea\\\\xc7\\\\xd5y\\\\xf4 qM\\x0e\\\\xb6\\\\x84\\\\x82xu\\x06\\\\xf7\\\\x9d\\x0f\u06ad\\\\xbf\\\\x95\\\\xa2\\\\x92\\\\xd84\\\\x9f4\\\\xc5\\\\xf5\\\\xf2H\\x00\\x1dC\\x18\\\\xf0_\\x00\\x1e\\\\xc0+\\\\xc0/\\\\xc0,\\\\xc00\u0329\u0328\\\\xc0\\t\\\\xc0\\x13\\\\xc0\\n\\\\xc0\\x14\\x00\\\\x9c\\x00\\\\x9d\\x00/\\x005\\x00\\n\\x01\\x00\\x01\\\\x95\\x00\\x17\\x00\\x00\\\\xff\\x01\\x00\\x01\\x00\\x00\\n\\x00\\x08\\x00\\x06\\x00\\x1d\\x00\\x17\\x00\\x18\\x00\\x0b\\x00\\x02\\x01\\x00\\x00#\\x00\\\\xe5\\x02\\\\xddR4\\\\xe1?x\\\\xe8\\\\xc1\\\\x88\\\\xfa\\\\x8f\\\\xa2\u06c5\u076ffVP\\\\xfc\\x13\\\\xfd\\\\xa9X\\\\xd5\\\\xfd\\\\x8c\\\\xdcVn\\\\xf6>[$\\\\xdf\\\\xf4 \\\\xbdT\\\\xf8u\\\\xec{k\\x0b\\\\xc9\\x13\\\\x9e\\\\x80\\x12\\\\x84@4T\\\\xfa\\\\xb3\\\\x92|\\\\xef\\x02\\\\xd5L\\x1c\\\\xb4\\\\xaf\\\\xea\\\\x89\\U000ebc09\\\\x83c\\\\xa4O\\\\xbdY\\\\xd3\\x07Cu\\x15\\\\xae|\\\\xc8\\\\xe4\\x02\\\\xf8~GSO\\\\xd7~e.\\\\x91F\\\\x80&\\\\xd8\\\\xde\"\\\\x92B\\'u\\r\\\\xa3k\\\\xb4\\\\xd2k%A?{\\x08\\x01\\\\xe7\\\\x98\\\\xf9\\\\xc2\\\\xdb\\\\xf0\\\\xc7Rw\\\\xee\\\\xcaT|\\\\xe1\\x05\\\\xad\\\\xb5\\\\xfe\\\\xa2\\\\xcdh5J5\\\\xf8\\x0f\\\\xbaP\\\\x8e\\x1b\\x0c\\\\xe7Fx2Y\\\\xf66\\\\x8d\\\\xdc\\x135\\\\xb7&?\\\\x98-\\\\x92\\\\x81\\x08\\\\x80e\\\\xea:\\\\x82\\\\x82\\\\xf5\\\\xf1\\\\x8f6g\\\\xa8\u0462\\x1fgR\\\\x99b\\\\xeb\\r\\\\x8b:h,3\\x1aF+\\\\xd2w\\\\xa4o\\x13\\\\xfa_\\\\xd4b\\\\xeet:B\\\\A\\\\xc0\\\\x92\\\\xd2\\\\xc9PAR\\x11\\\\xc4)\\x13)t\\\\xee\\\\x90\\x00\\r\\x00\\x14\\x00\\x12\\x04\\x03\\x08\\x04\\x04\\x01\\x05\\x03\\x08\\x05\\x05\\x01\\x08\\x06\\x06\\x01\\x02\\x01\\x00\\x15\\x00u\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'\n",
+        "payload": "1603010200010001fc0303686b608ea03f052d47429b21344ffc2843190e22e5dc72c0e7626beac7d579f420714d0eb68482787506f79d0fdaadbf95a292d8349f34c5f5f248001d4318f05f001ec02bc02fc02cc030cca9cca8c009c013c00ac014009c009d002f0035000a0100019500170000ff01000100000a00080006001d00170018000b00020100002300e502dd5234e13f78e8c188fa8fa2db85ddaf665650fc13fda958d5fd8cdc566ef63e5b24dff420bd54f875ec7b6b0bc9139e801284403454fab3927cef02d54c1cb4afea89f3abb0898363a44fbd59d307437515ae7cc8e402f87e47534fd77e652e91468026d8de22924227750da36bb4d26b25413f7b0801e798f9c2dbf0c75277eeca547ce105adb5fea2cd68354a35f80fba508e1b0ce746783259f6368ddc1335b7263f982d9281088065ea3a8282f5f18f3667a8d1a21f67529962eb0d8b3a682c331a462bd277a46f13fa5fd462ee743a425c41c092d2c950415211c429132974ee90000d001400120403080404010503080505010806060102010015007500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
     },
     {
         "timestamp": "1709733208.694581",
@@ -284,8 +316,9 @@
         "destination_mac": "8.8.8.8",
         "source_ip": "10.215.173.1",
         "destination_ip": "8.8.8.8",
-        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 45\n  id        = 37793\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0xdf41\n  src       = 10.215.173.1\n  dst       = 8.8.8.8\n  \\options   \\\n###[ TCP ]### \n     sport     = 34190\n     dport     = 853\n     seq       = 2673655400\n     ack       = 2011920364\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 64\n     chksum    = 0x111f\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x00\\x00\\x00\\x00\\x00'\n",
+        "payload": "0000000000"
     },
     {
         "timestamp": "1709733208.694819",
@@ -293,8 +326,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "8.8.8.8",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 A",
-        "raw2": null
+        "summary": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x72e8\n  src       = 8.8.8.8\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = 853\n     dport     = 34190\n     seq       = 2011920364\n     ack       = 2673655405\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 1023\n     chksum    = 0xd68\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.719818",
@@ -302,8 +336,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "8.8.8.8",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 187\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x7255\n  src       = 8.8.8.8\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = 853\n     dport     = 34190\n     seq       = 2011920364\n     ack       = 2673655405\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 1024\n     chksum    = 0x7ea2\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x16\\x03\\x03\\x00[\\x02\\x00\\x00W\\x03\\x03e\\\\xe8uXE\\\\xfdJ}\\x12\\\\xaa\"\\\\xee\\\\xe4\\\\xa2\\\\xe8\\\\xe2R\\\\xfd\\x1ev%M\\\\xf1|DOWNGRD\\x01 qM\\x0e\\\\xb6\\\\x84\\\\x82xu\\x06\\\\xf7\\\\x9d\\x0f\u06ad\\\\xbf\\\\x95\\\\xa2\\\\x92\\\\xd84\\\\x9f4\\\\xc5\\\\xf5\\\\xf2H\\x00\\x1dC\\x18\\\\xf0_\\\\xc0/\\x00\\x00\\x0f\\x00\\x17\\x00\\x00\\\\xff\\x01\\x00\\x01\\x00\\x00\\x0b\\x00\\x02\\x01\\x00\\x14\\x03\\x03\\x00\\x01\\x01\\x16\\x03\\x03\\x00(\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\\\xda \\\\xa5\\x10\\x11\\\\xb8%Vt\\\\xafm\\x11\\x14\\x12[\\\\x9d\\'HL\\\\x85\\x10k\\\\xc5\\x18\\\\xcc]\\\\xf1\\x0e\\\\x9bo\\\\xdf\\\\xd5'\n",
+        "payload": "160303005b02000057030365e8755845fd4a7d12aa22eee4a2e8e252fd1e76254df17c444f574e4752440120714d0eb68482787506f79d0fdaadbf95a292d8349f34c5f5f248001d4318f05fc02f00000f00170000ff01000100000b0002010014030300010116030300280000000000000000da20a51011b8255674af6d1114125b9d27484c85106bc518cc5df10e9b6fdfd5"
     },
     {
         "timestamp": "1709733208.719969",
@@ -311,8 +346,9 @@
         "destination_mac": "8.8.8.8",
         "source_ip": "10.215.173.1",
         "destination_ip": "8.8.8.8",
-        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 A",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 37794\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0xdf45\n  src       = 10.215.173.1\n  dst       = 8.8.8.8\n  \\options   \\\n###[ TCP ]### \n     sport     = 34190\n     dport     = 853\n     seq       = 2673655405\n     ack       = 2011920511\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 65\n     chksum    = 0x1093\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.756584",
@@ -320,8 +356,9 @@
         "destination_mac": "8.8.8.8",
         "source_ip": "10.215.173.1",
         "destination_ip": "8.8.8.8",
-        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 91\n  id        = 37795\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0xdf11\n  src       = 10.215.173.1\n  dst       = 8.8.8.8\n  \\options   \\\n###[ TCP ]### \n     sport     = 34190\n     dport     = 853\n     seq       = 2673655405\n     ack       = 2011920511\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 65\n     chksum    = 0x8de3\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x14\\x03\\x03\\x00\\x01\\x01\\x16\\x03\\x03\\x00(\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x009\\\\xa9\\\\xb9YwU\\x0e\\\\x95\\\\x8cY\\\\xaa\\\\xc5\\\\xf3\\x08\\\\x9c\\\\xf5\\\\xacKMM\\x7f\\\\xc6\\\\xdf\\\\xc6{=p\\\\x8fe\\\\xe8\\\\x82B'\n",
+        "payload": "1403030001011603030028000000000000000039a9b95977550e958c59aac5f3089cf5ac4b4d4d7fc6dfc67b3d708f65e88242"
     },
     {
         "timestamp": "1709733208.756796",
@@ -329,8 +366,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "8.8.8.8",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 A",
-        "raw2": null
+        "summary": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x72e8\n  src       = 8.8.8.8\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = 853\n     dport     = 34190\n     seq       = 2011920511\n     ack       = 2673655456\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 1023\n     chksum    = 0xca2\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.756900",
@@ -338,8 +376,9 @@
         "destination_mac": "8.8.8.8",
         "source_ip": "10.215.173.1",
         "destination_ip": "8.8.8.8",
-        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 199\n  id        = 37796\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0xdea4\n  src       = 10.215.173.1\n  dst       = 8.8.8.8\n  \\options   \\\n###[ TCP ]### \n     sport     = 34190\n     dport     = 853\n     seq       = 2673655456\n     ack       = 2011920511\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 65\n     chksum    = 0x4016\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x17\\x03\\x03\\x00\\\\x9a\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x01MU\\x1eQ\\\\xb6\\\\xe5eEc@\\\\x9ct\\x0c58\\\\x9d\\x04l=\u016e!\\\\x81\u0559\\\\x9f\\\\xc0\\\\xe9)H\\x04P1I\\\\x9cP\\x0b\\\\xf2\\\\xc3\\\\xc7clC{\\\\x93\\x0b\\\\xd1\\\\xe1\\\\xa0\\\\xf7.P\\\\x870\\\\xec~u\\\\xa9x\u0252A\\\\xaa\\\\xf1-UP\\\\xfa\\\\xb9W\\\\xcd\\\\xf3\\\\xc0\\x05\\\\xc7\u01a6\u06ce\\\\xe1i\\\\xf6\\x13\\\\xbbU\\\\xdd\\\\xf0\\rh\\\\xf3\\x04&\\x08\\\\xe0\\\\x85\\\\xc1 \\\\x94\u059f\\\\xac\\\\xc7\u02bb\\\\x84\\\\xeb\\\\x8b@\\\\xffK\\\\x87\\\\xb5@J=`\\\\xb8\\\\xfe\\\\x82Ycn\\x11\\\\x83\\\\x96\\\\xec\\\\xf7\\\\xeap\\\\xba\\x1a\\\\xad~_?\\\\xb1a<\\\\xebF\\\\xf6\\\\x87\\x03b\\\\xeb\\\\x9e'\n",
+        "payload": "170303009a00000000000000014d551e51b6e5654563409c740c35389d046c3dc5ae2181d5999fc0e92948045031499c500bf2c3c7636c437b930bd1e1a0f72e508730ec7e75a978c99241aaf12d5550fab957cdf3c005c7c6a6db8ee169f613bb55ddf00d68f3042608e085c12094d69facc7cabb84eb8b40ff4b87b5404a3d60b8fe8259636e118396ecf7ea70ba1aad7e5f3fb1613ceb46f6870362eb9e"
     },
     {
         "timestamp": "1709733208.756969",
@@ -347,8 +386,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "8.8.8.8",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 A",
-        "raw2": null
+        "summary": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x72e8\n  src       = 8.8.8.8\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = 853\n     dport     = 34190\n     seq       = 2011920511\n     ack       = 2673655615\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 1023\n     chksum    = 0xc03\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.775262",
@@ -356,8 +396,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "8.8.8.8",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 539\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x70f5\n  src       = 8.8.8.8\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = 853\n     dport     = 34190\n     seq       = 2011920511\n     ack       = 2673655615\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 1024\n     chksum    = 0xc5ff\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x17\\x03\\x03\\x01\\\\xee\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x01\\\\xc86\\\\xb1\\\\x93\\\\xb5I~4\\\\x9b8\\x15g\\x06\\\\xd9/3>`\\\\xc1T\\\\x91\\\\xe8g}\\\\xbcm\":\\\\xa9\\\\x92\\\\xfd\\\\xb5\\\\x84`\u044d\\\\xe0_\\\\xe4\u016c\\x00\\\\xa0\\\\xf2\\n\\\\xea\\x02\\\\xbb\\\\xcf\\\\Y\\\\xd2A\\\\xfbC?Y\\\\xc5\\\\xe3F%\\'\\\\x85\\x08\\\\xe4\\\\x840\\\\x82\\\\xe6\\\\xc7_\\\\xec7\\x1f\\\\xeekN!\\t\\x05\\\\xb0T\\\\xaaQDea2\\\\xd0?<\\\\x85\\\\x85+\\\\xd3\\x0eS\\\\xd9K\\\\xf6\\x03\\\\xe3\\x08\\\\xf8)XN\"Z\\\\xbb\\\\x88\\t\\\\xe51\\x06\\\\xf2\\\\xcd\\x00\\\\xcc\\\\xf7\\\\xad\\\\xddA\\\\xf1)Og\\\\xa7_\\u05ee\\\\xbeM\\\\xaf\\\\xaf\\\\xd2\\x1f&$\\\\x96\\\\xadz\\\\xd5~5\\\\xbe*j^T\\\\xbf\\\\x92\\\\x9a&\\\\x98\\\\xfe\\\\xbb\\\\xf5+\\x13\\\\xfdg{\\x0bW\\\\xf4Ml\\\\xbf\\tF|\\\\xce\\'\\\\xf7\\x1f\\\\xfe\\x1d\\\\xa5\\\\xd9\\\\xffa\\\\xfc\\\\xfae[Z\\\\x89\\\\xb1\\\\x94P\\U000937e9m\\x1b|\\\\x95\\\\xb5\\\\xa5\\\\xe9\\\\xad$\\x18h\\x1dT\\x1e=TV\\\\xba\\\\xc8\\\\xecb?\u3b64\\x19\\x15H\\\\xe1o\\\\xf3\\\\xa2l\\\\xd0M\\x02@\\\\xe2nu3=\\\\x8f\\\\xf1\\x13\\\\xfe\\'\\\\xd7\\x01\\x0c\\\\xf0_\\\\x93Jw\\\\xa9Ne\\\\xd9J1\\\\xe4\\\\xf0\\\\xc8P\u03ee\\x1e\\\\xf1\\\\xb1\"\\\\x9ba\\\\x81\\\\xa9\\\\xba\\x13\\\\xda\\'\\\\x9d\\x08H_7\\\\xf5\\x07\\\\xa5\\\\x85)TM\\\\xefF\\\\xbe{\\\\xcc+Y;8#\\\\x8d\\\\xf9X\\x08\\\\x93\\\\xe8;\\\\x84\u05b3Y]\\\\xa5H\\\\xed\\\\xce7\\\\x8f\\x0b\\\\xcd\\r\\\\xc1Q\\x13/\\\\xf0?\\\\xb0\\t\\\\xeccE\\\\xbe\\\\xc1\\\\x95\\\\xbc\\\\xa4\\\\xcb\\\\xc0GU$\\\\xe53^\\\\xa7\\\\xd1\\\\xe9\\x16\\\\xc0J\\\\xd2\\\\\\\\xa4u\\\\x94\\x18f\\\\x9d\\\\xb7\\\\xfd\\x01\\\\xfa\\\\x8b\\\\xb8,\\\\xdf\\\\xe9A\\\\xa1\\\\x8at\\\\xa5\\\\xf1\\\\xee5\\\\x81\\\\x97wx)\\\\xcb,\\\\xf6\\\\x82z\\\\xa7xw\\\\xf1\\\\xa3\\\\xbe4\\\\xcbbU*\\x02\\x1e!\\\\xac\\\\xa1\\\\xc87;\\\\xe7Z#\\\\xcc\\\\xe22n\\\\xd5\\x15vE\\\\xbe\\\\x81\\\\xe4\\x16s>\\x1d\\t\\\\xe5\\\\xcbl\\x00\\\\x9a<\\\\xb8\\\\xa4\\x00\\\\xb8Q\\\\xdeo\\x1dV)V\\n\u05bb\\\\xb2\\r\\\\xb6\\\\xfd\\x0b\u047a\\\\xb2\\x05\\\\x9d\\\\xe1\\\\xdd\u048a\\\\xe2\\x06S\\\\xb2\\x042|\\x18 \\\\xccC3\\\\x9c\\\\x9c%\\\\xee;M\\\\x82%q$+\\\\xe0#\\\\x95\\\\x92>nb\\\\x87\\\\xd1'\n",
+        "payload": "17030301ee0000000000000001c836b193b5497e349b38156706d92f333e60c15491e8677dbc6d223aa992fdb58460d18de05fe4c5ac00a0f20aea02bbcf5c59d241fb433f59c5e34625278508e4843082e6c75fec371fee6b4e210905b054aa5144656132d03f3c85852bd30e53d94bf603e308f829584e225abb8809e53106f2cd00ccf7addd41f1294f67a75fd7aebe4dafafd21f262496ad7ad57e35be2a6a5e54bf929a2698febbf52b13fd677b0b57f44d6cbf09467cce27f71ffe1da5d9ff61fcfa655b5a89b19450f2939fa96d1b7c95b5a5e9ad2418681d541e3d5456bac8ec623fe3ada4191548e16ff3a26cd04d0240e26e75333d8ff113fe27d7010cf05f934a77a94e65d94a31e4f0c850cfae1ef1b1229b6181a9ba13da279d08485f37f507a58529544def46be7bcc2b593b38238df9580893e83b84d6b3595da548edce378f0bcd0dc151132ff03fb009ec6345bec195bca4cbc0475524e5335ea7d1e916c04ad25ca4759418669db7fd01fa8bb82cdfe941a18a74a5f1ee358197777829cb2cf6827aa77877f1a3be34cb62552a021e21aca1c8373be75a23cce2326ed5157645be81e416733e1d09e5cb6c009a3cb8a400b851de6f1d5629560ad6bbb20db6fd0bd1bab2059de1ddd28ae20653b204327c1820cc43339c9c25ee3b4d822571242be02395923e6e6287d1"
     },
     {
         "timestamp": "1709733208.814033",
@@ -365,8 +406,9 @@
         "destination_mac": "142.251.173.188",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.251.173.188",
-        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 S",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 S",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 60\n  id        = 54249\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x7242\n  src       = 10.215.173.1\n  dst       = 142.251.173.188\n  \\options   \\\n###[ TCP ]### \n     sport     = 57908\n     dport     = 5228\n     seq       = 1496324910\n     ack       = 0\n     dataofs   = 10\n     reserved  = 0\n     flags     = S\n     window    = 65535\n     chksum    = 0x55ef\n     urgptr    = 0\n     options   = [('MSS', 9960), ('SAckOK', b''), ('Timestamp', (3629553907, 0)), ('NOP', None), ('WScale', 10)]\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.816811",
@@ -374,8 +416,9 @@
         "destination_mac": "8.8.8.8",
         "source_ip": "10.215.173.1",
         "destination_ip": "8.8.8.8",
-        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 A",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 37797\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0xdf42\n  src       = 10.215.173.1\n  dst       = 8.8.8.8\n  \\options   \\\n###[ TCP ]### \n     sport     = 34190\n     dport     = 853\n     seq       = 2673655615\n     ack       = 2011921010\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 66\n     chksum    = 0xdcd\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.826976",
@@ -383,8 +426,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "142.251.173.188",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 SA",
-        "raw2": null
+        "summary": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 SA",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 48\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x4638\n  src       = 142.251.173.188\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = 5228\n     dport     = 57908\n     seq       = 2011920363\n     ack       = 1496324911\n     dataofs   = 7\n     reserved  = 0\n     flags     = SA\n     window    = 1024\n     chksum    = 0x674\n     urgptr    = 0\n     options   = [('MSS', 9960), ('WScale', 10), ('EOL', None)]\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.827407",
@@ -392,8 +436,9 @@
         "destination_mac": "142.251.173.188",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.251.173.188",
-        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 A",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 54250\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x7255\n  src       = 10.215.173.1\n  dst       = 142.251.173.188\n  \\options   \\\n###[ TCP ]### \n     sport     = 57908\n     dport     = 5228\n     seq       = 1496324911\n     ack       = 2011920364\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 64\n     chksum    = 0x602c\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.828187",
@@ -401,8 +446,9 @@
         "destination_mac": "142.251.173.188",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.251.173.188",
-        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 A / Raw",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 A / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 552\n  id        = 54251\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x7054\n  src       = 10.215.173.1\n  dst       = 142.251.173.188\n  \\options   \\\n###[ TCP ]### \n     sport     = 57908\n     dport     = 5228\n     seq       = 1496324911\n     ack       = 2011920364\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 64\n     chksum    = 0x2d10\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x16\\x03\\x01\\x02\\x13\\x01\\x00\\x02\\x0f\\x03\\x03\\\\x80L}\\\\x9c\\x14kZ\\\\x8b\\\\xeb\\\\xce2\\x1fE\\\\xfa\\x17\u079e*|\\\\x94\\\\xde\\x1f\\x1e\\\\xa9\\\\x9dP\\\\xf9\\\\xe0&\\\\x86\\\\xdab U\\\\x9a\\\\xe9\\x19\\x7f\\\\xf4\\\\xbdU\\\\xb8\\\\xcf\\x01\\\\xb2\\\\xcd\\\\xf5cV\\\\xc7H\\\\xd5\\\\xe9\uc934\\n\\x0e}\\\\xa7\\\\xcd\\\\xed\\\\xb6\\\\xf3\\\\xf4\\x00\"\\x13\\x01\\x13\\x02\\x13\\x03\\\\xc0+\\\\xc0,\u0329\\\\xc0/\\\\xc00\u0328\\\\xc0\\t\\\\xc0\\n\\\\xc0\\x13\\\\xc0\\x14\\x00\\\\x9c\\x00\\\\x9d\\x00/\\x005\\x01\\x00\\x01\\\\xa4\\x00\\x00\\x00\\x15\\x00\\x13\\x00\\x00\\x10mtalk.google.com\\x00\\x17\\x00\\x00\\\\xff\\x01\\x00\\x01\\x00\\x00\\n\\x00\\x08\\x00\\x06\\x00\\x1d\\x00\\x17\\x00\\x18\\x00\\x0b\\x00\\x02\\x01\\x00\\x00#\\x00\\x00\\x00\\x05\\x00\\x05\\x01\\x00\\x00\\x00\\x00\\x00\\r\\x00\\x14\\x00\\x12\\x04\\x03\\x08\\x04\\x04\\x01\\x05\\x03\\x08\\x05\\x05\\x01\\x08\\x06\\x06\\x01\\x02\\x01\\x003\\x00&\\x00$\\x00\\x1d\\x00 qZ\\\\xf8\\\\xf0\\\\xc9g\\\\xb3W\\x14\u028d\\\\xd6\\\\xcc!?\\x05H\\\\x9f\\x19a\\\\xe2\\n;6\\x1a2x\\\\xf9\\\\xe9f\\\\x83v\\x00-\\x00\\x02\\x01\\x01\\x00+\\x00\\t\\x08\\x03\\x04\\x03\\x03\\x03\\x02\\x03\\x01\\x00)\\x01\\n\\x00\\\\xe5\\x00\\\\xdf\\x02\\\\x88W\\\\xc5Z\\\\xd7;\\\\xefw\\x16S2\\\\xd7\\tz\\\\xdd4\\\\x8c\\\\xebr\\x1f\\x18\\\\xb32\\\\xafTd\\\\x8cv\\\\xfb\\\\xdc\\x0c\\\\x94jZI\\x1d#\\\\xdb\\\\xdf5P\\x16\\\\x93\\x1dm\\\\xa4\\x12k\\\\xec\\\\x8b\u056aqu\\\\x8c\\\\x84\\\\xae\u04b0\\\\xa6\\\\xc7\\\\xe5U\\\\xc9\\x1b^^\\r\\\\\\\\xa52\\\\xaa\\x17B\\\\xa8\\\\x8c|Yi\\\\xa7\\\\xcc\\x19\\\\xe6\\x13u\\\\xd8\u01f9X\\\\x8fs\\\\xa9\\\\xff\\x11%\\x14\\\\x98\\t\\\\xb8u$\\\\xaa\\\\x82>\\\\x8a\\\\xba\\\\xa6\\\\xbbl\\x01\\\\x8d\u0494%\\x0c\\\\xab\\\\xe97\\\\xd3P\\\\xe8\\\\x89\\x05\\\\xb8\\\\x97\\\\xcd\\\\xec(8\\\\x8e\\\\x8b\\\\xfbj\\\\xb4`9\\x1c\\\\xea\\\\xb5:\\\\x8bH\\\\x93:\u0302J\\x18\u04eb\\\\xb3\u071cM\\\\xe9z\u78d76\u0766\\rb{\u02fa\\\\xdeNP\\\\xa2D>S\\x11\\\\xd1\\\\xdda\\\\xf9\\\\xbe\\\\xe17\\\\xd2\\x13\\\\xa0/\\\\xc53C\\\\xfb\\\\xda\\\\xf4\\\\xfd\\\\xacG\\\\xa4\\\\x9c\\\\xc8\\\\xfcK\\\\x97\\x0e4\\\\xae\\x1a\\x01,\\\\xfd\\\\x88\\\\x9c\\x0fBRUL\\\\xa8\\x14\\\\xe7\\\\xbee\\\\xeb\\\\xf9\\x18\\\\x9c\\u07b9\\x00! \\\\x94D2\\\\xa7H\\x01\\\\xcd\\\\xff'\n",
+        "payload": "16030102130100020f0303804c7d9c146b5a8bebce321f45fa17de9e2a7c94de1f1ea99d50f9e02686da6220559ae9197ff4bd55b8cf01b2cdf56356c748d5e9eca4b40a0e7da7cdedb6f3f40022130113021303c02bc02ccca9c02fc030cca8c009c00ac013c014009c009d002f0035010001a40000001500130000106d74616c6b2e676f6f676c652e636f6d00170000ff01000100000a00080006001d00170018000b0002010000230000000500050100000000000d00140012040308040401050308050501080606010201003300260024001d0020715af8f0c967b35714ca8dd6cc213f05489f1961e20a3b361a3278f9e9668376002d00020101002b00090803040303030203010029010a00e500df028857c55ad73bef77165332d7097add348ceb721f18b332af54648c76fbdc0c946a5a491d23dbdf355016931d6da4126bec8bd5aa71758c84aed2b0a6c7e555c91b5e5e0d5ca532aa1742a88c7c5969a7cc19e61375d8c7b9588f73a9ff1125149809b87524aa823e8abaa6bb6c018dd294250cabe937d350e88905b897cdec28388e8bfb6ab460391ceab53a8b48933acc824a18d3abb3dc9c4de97ae7a39736dda60d627bcbbade4e50a2443e5311d1dd61f9bee137d213a02fc53343fbdaf4fdac47a49cc8fc4b970e34ae1a012cfd889c0f4252554ca814e7be65ebf9189cdeb9002120944432a74801cdff"
     },
     {
         "timestamp": "1709733208.828445",
@@ -410,8 +456,9 @@
         "destination_mac": "142.251.173.188",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.251.173.188",
-        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 64\n  id        = 54252\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x723b\n  src       = 10.215.173.1\n  dst       = 142.251.173.188\n  \\options   \\\n###[ TCP ]### \n     sport     = 57908\n     dport     = 5228\n     seq       = 1496325423\n     ack       = 2011920364\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 64\n     chksum    = 0xbf23\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = 'Qd\\n.\\x14\\x0e[\\\\xc5S\\x0c\\\\x9e\\\\x99z\\\\xd6OPZ\\\\xfbp\\\\xf3\\\\x98B\\\\xb3\\\\x84'\n",
+        "payload": "51640a2e140e5bc5530c9e997ad64f505afb70f39842b384"
     },
     {
         "timestamp": "1709733208.828785",
@@ -419,8 +466,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "142.251.173.188",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 A",
-        "raw2": null
+        "summary": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x4640\n  src       = 142.251.173.188\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = 5228\n     dport     = 57908\n     seq       = 2011920364\n     ack       = 1496325447\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 1023\n     chksum    = 0x5a55\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.840289",
@@ -428,8 +476,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "142.251.173.188",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 243\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x4575\n  src       = 142.251.173.188\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = 5228\n     dport     = 57908\n     seq       = 2011920364\n     ack       = 1496325447\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 1024\n     chksum    = 0xd75b\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x16\\x03\\x03\\x00\\\\x80\\x02\\x00\\x00|\\x03\\x03\\\\xe28\\x06\\\\xfb\\\\xdc\\\\xe9\\\\xed\\\\xc6I\\\\x98:\\\\x9aw\\\\x9d\\\\x9dU\u0545Q\\r\\\\xef\\\\xad\\\\xd9bA\\\\xe1g\\x07\\\\xe2\\\\x9d\\\\xf2\\x01 U\\\\x9a\\\\xe9\\x19\\x7f\\\\xf4\\\\xbdU\\\\xb8\\\\xcf\\x01\\\\xb2\\\\xcd\\\\xf5cV\\\\xc7H\\\\xd5\\\\xe9\uc934\\n\\x0e}\\\\xa7\\\\xcd\\\\xed\\\\xb6\\\\xf3\\\\xf4\\x13\\x01\\x00\\x004\\x00)\\x00\\x02\\x00\\x00\\x003\\x00$\\x00\\x1d\\x00 c\\\\xd82\\\\xee\\\\xf7\\\\xe1\\x01#f\\x1c\\\\x92j\\\\xdd\\x0b\\\\xf6\\x17\\\\xeb\\\\xf8\\x1b~B\\\\x8a\\\\x8c\\x1f\\\\x83\\\\xfcHh\\\\xca\\\\xc0\\\\xe6 \\x00+\\x00\\x02\\x03\\x04\\x14\\x03\\x03\\x00\\x01\\x01\\x17\\x03\\x03\\x00;G\\\\xaf$\\\\xad\u70e9\\x1e\\\\xc5F\\\\xea\\\\x91p\\\\x84\\\\xab\\x0e\\\\xec\\\\xf2\\\\xdd\\\\xc8>\\\\xad\u0445d\u0516f\\\\xd1I\\x04\u01ef\\\\x92\\x05\\x0f5V_\\x04\\\\x90j\\\\xce\\\\xd4\\x01\\\\xa2tu\\x0e~\\\\xfc\\\\xfa[\\\\xf14\\r\\\\xbb\\n\\\\xf0'\n",
+        "payload": "16030300800200007c0303e23806fbdce9edc649983a9a779d9d55d585510defadd96241e16707e29df20120559ae9197ff4bd55b8cf01b2cdf56356c748d5e9eca4b40a0e7da7cdedb6f3f4130100003400290002000000330024001d002063d832eef7e10123661c926add0bf617ebf81b7e428a8c1f83fc4868cac0e620002b00020304140303000101170303003b47af24ade783a91ec546ea917084ab0eecf2ddc83eadd18564d49666d14904c7af92050f35565f04906aced401a274750e7efcfa5bf1340dbb0af0"
     },
     {
         "timestamp": "1709733208.840849",
@@ -437,8 +486,9 @@
         "destination_mac": "142.251.173.188",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.251.173.188",
-        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 A",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 54253\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x7252\n  src       = 10.215.173.1\n  dst       = 142.251.173.188\n  \\options   \\\n###[ TCP ]### \n     sport     = 57908\n     dport     = 5228\n     seq       = 1496325447\n     ack       = 2011920567\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 65\n     chksum    = 0x5d48\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.883275",
@@ -446,8 +496,9 @@
         "destination_mac": "142.251.173.188",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.251.173.188",
-        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 104\n  id        = 54254\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x7211\n  src       = 10.215.173.1\n  dst       = 142.251.173.188\n  \\options   \\\n###[ TCP ]### \n     sport     = 57908\n     dport     = 5228\n     seq       = 1496325447\n     ack       = 2011920567\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 65\n     chksum    = 0xa897\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x14\\x03\\x03\\x00\\x01\\x01\\x17\\x03\\x03\\x005\\x1d\\\\x8a\\\\xf36]na?K\\\\xc6<\\x06\\x15P\\\\xbd\\\\xdao\\\\x8a\\x00\\\\xe3\\\\xa4\\\\xc1\\\\xdbV_\\\\xf7AB\\\\x90\\\\xbfcmg\\\\x82\\\\xaa\\\\xd2\\\\xd0\\x0c{%\\x00AT\\\\xcblE\\\\x8a\\\\xcc+j\\\\x8d\\\\xeaN'\n",
+        "payload": "14030300010117030300351d8af3365d6e613f4bc63c061550bdda6f8a00e3a4c1db565ff7414290bf636d6782aad2d00c7b25004154cb6c458acc2b6a8dea4e"
     },
     {
         "timestamp": "1709733208.883628",
@@ -455,8 +506,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "142.251.173.188",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 A",
-        "raw2": null
+        "summary": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x4640\n  src       = 142.251.173.188\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = 5228\n     dport     = 57908\n     seq       = 2011920567\n     ack       = 1496325511\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 1023\n     chksum    = 0x594a\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.921227",
@@ -464,8 +516,9 @@
         "destination_mac": "142.251.173.188",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.251.173.188",
-        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 419\n  id        = 54255\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x70d5\n  src       = 10.215.173.1\n  dst       = 142.251.173.188\n  \\options   \\\n###[ TCP ]### \n     sport     = 57908\n     dport     = 5228\n     seq       = 1496325511\n     ack       = 2011920567\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 65\n     chksum    = 0xf6d7\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x17\\x03\\x03\\x01v\\\\x82i[\\x04)t\\\\xd9\\\\xe4\\\\xef4\\\\xed\\\\xad\\\\x80=)\\\\xb9\\\\xf2\\x00\\\\xb6\u0673=Vk\\x05W\u02f2\\\\xeab*7~Z\\\\xf8\\x06[\\\\xd3\\x07\\\\xa9w\\\\xc1\\\\xc8\\\\xc1\\\\xca\\\\xfb[5\\\\xaf\\\\xd7\\\\xe6\\\\xf9\\\\x94h\\\\x8c~\\\\xd7\\x004\\x14IW\"\\\\xd5\\x14\u00f0\\\\x8e\\\\xe3\\\\xf1ht\\x07\\\\x93\\\\xfa\u019bw-(?\\\\xed\\\\e\\x19\\\\x8e\\\\xbd\\x0c\\\\xe9}\\\\xa4\\x12\\\\x88\\\\x8a\\\\x9e\\\\xaek\\x02^M\\\\xb9\\x16-(d[>\\\\xba\\\\xb8^K=\\x0b\\x16\\\\x86\\\\x9a<\\\\xf6\\\\x95\\\\xd6\u0352!d\\x7f\\x04H\u03f2\\\\xbb\\x7f*\\\\xd3M\\x05v\\\\xc4r\\tV\\\\xa9\\x10H\\\\xa7\\\\xb06h\\\\xed\\\\x9a\\\\xea\\x10y\\\\xf5\\\\xe7_\\\\xbb\\\\xa4e6\\\\xc8\u0521C\\\\x97\\\\xbb\\\\xcbG]y\\\\x87\\\\xdd.#\\x12\\\\xcb\\\\xfa\\\\xcc!Hn\\\\xff\\n\\x7f\\\\xa3\\\\xa7\\x1a\\\\xf1.I\\\\xec\\\\xe8\\\\x93\\x03{H\\x1al\\\\xecB\\\\xd6#Y\\\\xb9z\\x03\\\\xddO\\\\xdf\\\\xe0\\\\xa7x\\\\xcf\\x06\\\\xde\\\\xcc\\\\xc3\\\\xe3\\\\xccf\\\\x86\\x00\\\\xa1J\u0443\\\\xde\\'B1\\\\x91\\\\xfcx\\\\xed`\\\\xca\\\\xe8\\x0f\\\\x94Q`\\\\x97\\x18\\x1a\\\\xc5\\\\xe6\u00cb\\\\xa9h\\\\x9ce\\\\x99\\x1d\\\\x83\\\\x99.\\\\x8cF\\\\x9f\\\\xe9!{\\x0b\\\\xa2\\\\xaa\\x1e\\\\x9b\\\\xf8In\\\\xfes\\\\xe9\\\\xb8\\\\xc0\u06fe\\\\x83\\\\xa8\\\\xafF \u0323\\x1ev\\\\xd1\\\\xd3\\\\xe6\\\\x90\\\\xeb\\\\xc4/\\x12\"\\x06\\\\xf8\\\\xd8:\\\\xf8A(\\u07b4\\\\xbbabt\\\\xe7\\\\xf1\\x01/\\\\xaf\\\\x87\\\\x92r\\\\l\\x05\\\\xaa\\\\xa1\\\\xd3\\\\xf1\\\\xcd\\\\xcb\\\\xfe\\\\xeeTy\\\\xaf\\'a\\\\xf4z\\\\xe6\\\\xa8\\x16y\\\\xa4^\\\\xd0\\x0c3\\\\xfe\\\\xab\\t\\x16\\\\xbd\\\\xfaC5\\x019\\\\xaf\\\\xad\\\\xa3\\\\xb9\\\\xdc\\\\xd9]\\\\xc1\\x19\\\\xc19\\\\xbf\\x02\\x0e\\\\x97\\\\xbbi5,g\\x10'\n",
+        "payload": "170303017682695b042974d9e4ef34edad803d29b9f200b6d9b33d566b0557cbb2ea622a377e5af8065bd307a977c1c8c1cafb5b35afd7e6f994688c7ed7003414495722d514c3b08ee3f168740793fac69b772d283fed5c65198ebd0ce97da412888a9eae6b025e4db9162d28645b3ebab85e4b3d0b16869a3cf695d6cd9221647f0448cfb2bb7f2ad34d0576c4720956a91048a7b03668ed9aea1079f5e75fbba46536c8d4a14397bbcb475d7987dd2e2312cbfacc21486eff0a7fa3a71af12e49ece893037b481a6cec42d62359b97a03dd4fdfe0a778cf06deccc3e3cc668600a14ad183de27423191fc78ed60cae80f94516097181ac5e6c38ba9689c65991d83992e8c469fe9217b0ba2aa1e9bf8496efe73e9b8c0dbbe83a8af4620cca31e76d1d3e690ebc42f122206f8d83af84128deb4bb616274e7f1012faf8792725c6c05aaa1d3f1cdcbfeee5479af2761f47ae6a81679a45ed00c33feab0916bdfa43350139afada3b9dcd95dc119c139bf020e97bb69352c6710"
     },
     {
         "timestamp": "1709733208.921520",
@@ -473,8 +526,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "142.251.173.188",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 A",
-        "raw2": null
+        "summary": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x4640\n  src       = 142.251.173.188\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = 5228\n     dport     = 57908\n     seq       = 2011920567\n     ack       = 1496325890\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 1023\n     chksum    = 0x57cf\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.966533",
@@ -482,8 +536,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "142.251.173.188",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 575\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x4429\n  src       = 142.251.173.188\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = 5228\n     dport     = 57908\n     seq       = 2011920567\n     ack       = 1496325890\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 1024\n     chksum    = 0x25c4\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x17\\x03\\x03\\x01\\\\xfb\\x1d\\\\xa9\\\\xbf\\\\x81{n\\\\xb2\\\\xa5jP\\\\xea\\\\xc1M\\\\xfe`gu\\\\xb6\\x11\\x1dg#0\\x18O`GB\\\\xbfJ\\\\xd1\\x16\\\\xfe\\\\xceXA\\\\xf4v\\\\x870b$\\\\x93KNr\\\\xf3\u05c5\\\\xbd\\x0b6}\\x02|\\x19\\u0602\\\\xea\\\\xfa\\\\xe2\\\\x9d|q\\\\xb6l\\\\q\\\\xd8{`\\\\xb2\\\\xfc\\\\xcb\u64df\\\\xa3}g\\\\x97\\x1d\\\\xbd\u4751\\\\x93~o\\\\x97)\\\\x8cU\\\\xd1\"bN\\\\xcf\\\\xcb\\\\xf5\\\\xa0\\\\xc7W\\x1aq\\\\x95\\\\xaa\\\\xddK\\\\xb8?\\x1aA2\\x10\\\\xaaR\\\\x8b\\\\x9b\\x02\\\\x98\\\\x98$\\\\x91\u03c2\\\\xab\\\\xe6\\\\x98\\\\xc5R\\\\xbe\\\\xf8;=:\u0697\\\\x80\\x18\\x01\\\\xb1\\\\xf20c\u041d\\\\xf1K\\\\xd0Q\\\\xb64\\\\xb5\\\\x96\\\\xaa\\\\xa7\\\\x96\\\\xea\\\\xa7\u5153\\\\xbb\\\\xc3oFW\\\\xe2K\\x10(\\\\xf2kv\\t\\\\xa6\\\\xcd1-\\ri\u0581N\\\\xd8\\\\xde\\\\xc3\\\\xeae,\\\\xf8,8N\\\\xc8p\\\\xeb\u05b9\\\\xad\\\\xa2\\x0c\\\\xc6iVqf-E\\t\\x1e\\\\xd7O\\\\xe3\\\\x8a\\\\xeb\\\\xfe\\\\xfd\u021fm\\x7f:\\x0f9\\\\x94\u073f\\\\x8a\\\\xa6\\x04^\\x1d*\\\\xca\\x0fa\\\\xa9\\\\x82\\\\x81\\\\xa04\\\\xbcN\\x13R\\\\xeb{\\\\xce\\\\xd0}Jn\\\\xc5\\\\xf36l\u0531\\\\xda,\\\\xbf\\\\x91{\\\\xfd\\\\xec\\\\x9c*1\\\\xa6\\\\xa9\\\\x98\\x082\\\\xa6\\x14_\\\\\u0133\\\\xa1\\\\xa1\\\\x83(2N\\\\xc7\\\\xec:\\\\xa5V)H\\\\xd1\\\\xc2\\\\xc6%\\\\x9e\\x1b\\\\xe8%\\\\xbc\\t0\\\\xec!\\\\xe8\\\\xcf~t\\\\xe9\\\\xd3\u0510Kx+4\\\\xfc\\\\xa6\\u05fd\\\\xcc\\\\xcf\\x11\\\\xfb\\\\xee\\\\xec\\\\xe9\\\\x81\\x07\\\\xfb\\\\xf8\\\\x88,2\\\\x87\\r?\\\\xbf\\\\xbbj\\x15\\\\xb46\\\\xec-%\\x1b}\\\\xa2\\\\x84\\\\xd8\\n06w^\\\\xfa\\\\xaf\\x14\\\\xe0\\\\xa6X\\\\xa2.\\\\xbd\\\\xbc\\\\xbfW\\\\xf6\\x136\\\\xa5{_X^\\\\xf2\\\\xa8J\\\\\\\\xa7\u0625[\\x12\\\\x9f\\\\x85(\\t\\\\xc1|\\\\xce\uc65d\\\\xbaPq\\x01O\\\\xf1\"\\\\xaa\\\\xd4=vt\\\\xa7ft\\\\xfb\\x1f\\\\xa8;\\\\xdd\\\\xf6\\\\x91\\x03\\\\xb1\u03db\\\\x8eh\\\\xa6\\\\\\\\xa0\\\\xa2\\\\xea\\x17r\\\\xf4\\\\xa0\\\\x95\\\\xed\\\\a9\\\\xeb\\x06\\\\xe0\\\\x81\\x0f-\\\\xcf\\x14\\\\xe4&\\\\x9c\u0478\\x1b\\\\xa39\u014d\\\\xc6+x\\x1e\\\\xd1i\\\\xe2s\\\\xd4C\\\\xbc\\\\xb8\u01dd\\\\xa2\\\\x8bc\\\\x81\\\\xbe\\\\x88\\\\x87\\x11\"4?(7VN\\x06\\\\xa0\\\\x93g\\\\xcb=5\\\\xf9\\\\xceJ4\\\\xeaGAn\\\\xb3\\x7f\\\\xa2n\\\\xd2\\x17\\x03\\x03\\x00\\x12\\x1a\\rx\\\\xafT\\\\x80rGy\\x04\\\\xe9=N\\\\x9b\\\\xe5{`U'\n",
+        "payload": "17030301fb1da9bf817b6eb2a56a50eac14dfe606775b6111d672330184f604742bf4ad116fece5841f47687306224934b4e72f3d785bd0b367d027c19d882eafae29d7c71b66c5c71d87b60b2fccbe6939fa37d67971dbde49d91937e6f97298c55d122624ecfcbf5a0c7571a7195aadd4bb83f1a413210aa528b9b0298982491cf82abe698c552bef83b3d3ada97801801b1f23063d09df14bd051b634b596aaa796eaa7e58593bbc36f4657e24b1028f26b7609a6cd312d0d69d6814ed8dec3ea652cf82c384ec870ebd6b9ada20cc6695671662d45091ed74fe38aebfefdc89f6d7f3a0f3994dcbf8aa6045e1d2aca0f61a98281a034bc4e1352eb7bced07d4a6ec5f3366cd4b1da2cbf917bfdec9c2a31a6a9980832a6145f5cc4b3a1a18328324ec7ec3aa5562948d1c2c6259e1be825bc0930ec21e8cf7e74e9d3d4904b782b34fca6d7bdcccf11fbeeece98107fbf8882c32870d3fbfbb6a15b436ec2d251b7da284d80a3036775efaaf14e0a658a22ebdbcbf57f61336a57b5f585ef2a84a5ca7d8a55b129f852809c17cceec999dba5071014ff122aad43d7674a76674fb1fa83bddf69103b1cf9b8e68a65ca0a2ea1772f4a095ed5c6139eb06e0810f2dcf14e4269cd1b81ba339c58dc62b781ed169e273d443bcb8c79da28b6381be88871122343f2837564e06a09367cb3d35f9ce4a34ea47416eb37fa26ed217030300121a0d78af548072477904e93d4e9be57b6055"
     },
     {
         "timestamp": "1709733208.967482",
@@ -491,8 +546,9 @@
         "destination_mac": "142.251.173.188",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.251.173.188",
-        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 A",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 54256\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x724f\n  src       = 10.215.173.1\n  dst       = 142.251.173.188\n  \\options   \\\n###[ TCP ]### \n     sport     = 57908\n     dport     = 5228\n     seq       = 1496325890\n     ack       = 2011921102\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 67\n     chksum    = 0x5974\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733208.971585",
@@ -500,8 +556,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "142.251.173.188",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 158\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x45ca\n  src       = 142.251.173.188\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = 5228\n     dport     = 57908\n     seq       = 2011921102\n     ack       = 1496325890\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 1024\n     chksum    = 0xb712\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x17\\x03\\x03\\x00O\\\\xb6}\\\\xd0LRP\\\\xed\\\\xac\\\\x89<\\x12\\\\xb1\\\\xfb{\\\\xe1G\\\\xb3\\\\xed\\\\x8b\\\\xcf\\\\xc9\\\\xd4t\u0468\\\\xeaD\\\\x92--\\\\xab\u130aUO\\\\xb8\\\\x8fv\\\\xd3fa\\\\xa8y\\\\xd7:\\\\x8c\\x06?{\\\\x8c\\\\x86rL\\\\xb0\\\\xed\\\\xd2\\\\xe1\\\\xc5\\\\xe6\\\\xa4T\\u07ba\\\\x83.\\\\xe9\\\\xf7\\\\xf7~\\x7f -\\\\xb6/\\\\xf1.7\\\\xbc\\x17\\x03\\x03\\x00\\x1d9\\x15\\\\xa3\\\\xdbe{\\\\xf0\\\\x9a\\x1e\\\\xec\\\\xbfs\\x17!\\\\x944\\x07\\\\xf41\\\\xfeVm@\\\\xde<\\\\xdc\\x00\\\\xac\\x16'\n",
+        "payload": "170303004fb67dd04c5250edac893c12b1fb7be147b3ed8bcfc9d474d1a8ea44922d2dabe18c8a554fb88f76d36661a879d73a8c063f7b8c86724cb0edd2e1c5e6a454deba832ee9f7f77e7f202db62ff12e37bc170303001d3915a3db657bf09a1eecbf731721943407f431fe566d40de3cdc00ac16"
     },
     {
         "timestamp": "1709733208.971751",
@@ -509,8 +566,9 @@
         "destination_mac": "142.251.173.188",
         "source_ip": "10.215.173.1",
         "destination_ip": "142.251.173.188",
-        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 A",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 54257\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x724e\n  src       = 10.215.173.1\n  dst       = 142.251.173.188\n  \\options   \\\n###[ TCP ]### \n     sport     = 57908\n     dport     = 5228\n     seq       = 1496325890\n     ack       = 2011921220\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 67\n     chksum    = 0x58fe\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733228.843615",
@@ -518,8 +576,9 @@
         "destination_mac": "8.8.8.8",
         "source_ip": "10.215.173.1",
         "destination_ip": "8.8.8.8",
-        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 PA / Raw",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 PA / Raw",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 71\n  id        = 37798\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0xdf22\n  src       = 10.215.173.1\n  dst       = 8.8.8.8\n  \\options   \\\n###[ TCP ]### \n     sport     = 34190\n     dport     = 853\n     seq       = 2673655615\n     ack       = 2011921010\n     dataofs   = 5\n     reserved  = 0\n     flags     = PA\n     window    = 66\n     chksum    = 0xa1ac\n     urgptr    = 0\n     options   = []\n###[ Raw ]### \n        load      = '\\x15\\x03\\x03\\x00\\x1a\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x02g\\x15\\\\x8a\\\\x98md\\\\xdbi\\\\xa0e\\x1e{\\\\xba\\x00\\\\xfe.D\\\\xab'\n",
+        "payload": "150303001a000000000000000267158a986d64db69a0651e7bba00fe2e44ab"
     },
     {
         "timestamp": "1709733228.844524",
@@ -527,8 +586,9 @@
         "destination_mac": "8.8.8.8",
         "source_ip": "10.215.173.1",
         "destination_ip": "8.8.8.8",
-        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 FA",
-        "raw2": null
+        "summary": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 FA",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 37799\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0xdf40\n  src       = 10.215.173.1\n  dst       = 8.8.8.8\n  \\options   \\\n###[ TCP ]### \n     sport     = 34190\n     dport     = 853\n     seq       = 2673655646\n     ack       = 2011921010\n     dataofs   = 5\n     reserved  = 0\n     flags     = FA\n     window    = 66\n     chksum    = 0xdad\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733228.844959",
@@ -536,8 +596,9 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "8.8.8.8",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 A",
-        "raw2": null
+        "summary": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 A",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x72e8\n  src       = 8.8.8.8\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = 853\n     dport     = 34190\n     seq       = 2011921010\n     ack       = 2673655616\n     dataofs   = 5\n     reserved  = 0\n     flags     = A\n     window    = 1023\n     chksum    = 0xa0f\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     },
     {
         "timestamp": "1709733228.845520",
@@ -545,7 +606,8 @@
         "destination_mac": "10.215.173.1",
         "source_ip": "8.8.8.8",
         "destination_ip": "10.215.173.1",
-        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 RA",
-        "raw2": null
+        "summary": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 RA",
+        "raw_data": "###[ IP ]### \n  version   = 4\n  ihl       = 5\n  tos       = 0x0\n  len       = 40\n  id        = 0\n  flags     = DF\n  frag      = 0\n  ttl       = 64\n  proto     = tcp\n  chksum    = 0x72e8\n  src       = 8.8.8.8\n  dst       = 10.215.173.1\n  \\options   \\\n###[ TCP ]### \n     sport     = 853\n     dport     = 34190\n     seq       = 2011921010\n     ack       = 2673655616\n     dataofs   = 5\n     reserved  = 0\n     flags     = RA\n     window    = 63\n     chksum    = 0xdcb\n     urgptr    = 0\n     options   = ''\n",
+        "payload": null
     }
 ]
