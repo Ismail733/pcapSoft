@@ -1,0 +1,551 @@
+[
+    {
+        "timestamp": "1709733203.614890",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.250.201.164",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.250.201.164",
+        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https S",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.619845",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "216.58.214.163",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "216.58.214.163",
+        "raw1": "IP / TCP 10.215.173.1:34230 > 216.58.214.163:http S",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.639724",
+        "source_mac": "142.250.201.164",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "142.250.201.164",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 SA",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.640000",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.250.201.164",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.250.201.164",
+        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.640591",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.250.201.164",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.250.201.164",
+        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https A / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.640746",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.250.201.164",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.250.201.164",
+        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.640904",
+        "source_mac": "142.250.201.164",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "142.250.201.164",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.640957",
+        "source_mac": "216.58.214.163",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "216.58.214.163",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 216.58.214.163:http > 10.215.173.1:34230 SA",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.641168",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "216.58.214.163",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "216.58.214.163",
+        "raw1": "IP / TCP 10.215.173.1:34230 > 216.58.214.163:http A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.641375",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "216.58.214.163",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "216.58.214.163",
+        "raw1": "IP / TCP 10.215.173.1:34230 > 216.58.214.163:http PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.641528",
+        "source_mac": "216.58.214.163",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "216.58.214.163",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 216.58.214.163:http > 10.215.173.1:34230 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.679671",
+        "source_mac": "216.58.214.163",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "216.58.214.163",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 216.58.214.163:http > 10.215.173.1:34230 PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.679945",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "216.58.214.163",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "216.58.214.163",
+        "raw1": "IP / TCP 10.215.173.1:34230 > 216.58.214.163:http A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.679969",
+        "source_mac": "142.250.201.164",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "142.250.201.164",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.680126",
+        "source_mac": "216.58.214.163",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "216.58.214.163",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 216.58.214.163:http > 10.215.173.1:34230 FA",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.681208",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.250.201.164",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.250.201.164",
+        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.681217",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "216.58.214.163",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "216.58.214.163",
+        "raw1": "IP / TCP 10.215.173.1:34230 > 216.58.214.163:http FA",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.681224",
+        "source_mac": "216.58.214.163",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "216.58.214.163",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 216.58.214.163:http > 10.215.173.1:34230 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.937257",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.250.201.164",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.250.201.164",
+        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.937565",
+        "source_mac": "142.250.201.164",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "142.250.201.164",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.940460",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.250.201.164",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.250.201.164",
+        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.940593",
+        "source_mac": "142.250.201.164",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "142.250.201.164",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.966017",
+        "source_mac": "142.250.201.164",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "142.250.201.164",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.966246",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.250.201.164",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.250.201.164",
+        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.966260",
+        "source_mac": "142.250.201.164",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "142.250.201.164",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 FA",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.967420",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.250.201.164",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.250.201.164",
+        "raw1": "IP / TCP 10.215.173.1:38904 > 142.250.201.164:https FA",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733203.967434",
+        "source_mac": "142.250.201.164",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "142.250.201.164",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 142.250.201.164:https > 10.215.173.1:38904 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.663011",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "8.8.8.8",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "8.8.8.8",
+        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 S",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.693649",
+        "source_mac": "8.8.8.8",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "8.8.8.8",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 SA",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.693814",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "8.8.8.8",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "8.8.8.8",
+        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.694395",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "8.8.8.8",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "8.8.8.8",
+        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 A / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.694581",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "8.8.8.8",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "8.8.8.8",
+        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.694819",
+        "source_mac": "8.8.8.8",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "8.8.8.8",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.719818",
+        "source_mac": "8.8.8.8",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "8.8.8.8",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.719969",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "8.8.8.8",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "8.8.8.8",
+        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.756584",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "8.8.8.8",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "8.8.8.8",
+        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.756796",
+        "source_mac": "8.8.8.8",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "8.8.8.8",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.756900",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "8.8.8.8",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "8.8.8.8",
+        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.756969",
+        "source_mac": "8.8.8.8",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "8.8.8.8",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.775262",
+        "source_mac": "8.8.8.8",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "8.8.8.8",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.814033",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.251.173.188",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.251.173.188",
+        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 S",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.816811",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "8.8.8.8",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "8.8.8.8",
+        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.826976",
+        "source_mac": "142.251.173.188",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "142.251.173.188",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 SA",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.827407",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.251.173.188",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.251.173.188",
+        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.828187",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.251.173.188",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.251.173.188",
+        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 A / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.828445",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.251.173.188",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.251.173.188",
+        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.828785",
+        "source_mac": "142.251.173.188",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "142.251.173.188",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.840289",
+        "source_mac": "142.251.173.188",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "142.251.173.188",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.840849",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.251.173.188",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.251.173.188",
+        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.883275",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.251.173.188",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.251.173.188",
+        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.883628",
+        "source_mac": "142.251.173.188",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "142.251.173.188",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.921227",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.251.173.188",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.251.173.188",
+        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.921520",
+        "source_mac": "142.251.173.188",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "142.251.173.188",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.966533",
+        "source_mac": "142.251.173.188",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "142.251.173.188",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.967482",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.251.173.188",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.251.173.188",
+        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.971585",
+        "source_mac": "142.251.173.188",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "142.251.173.188",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 142.251.173.188:5228 > 10.215.173.1:57908 PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733208.971751",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "142.251.173.188",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "142.251.173.188",
+        "raw1": "IP / TCP 10.215.173.1:57908 > 142.251.173.188:5228 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733228.843615",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "8.8.8.8",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "8.8.8.8",
+        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 PA / Raw",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733228.844524",
+        "source_mac": "10.215.173.1",
+        "destination_mac": "8.8.8.8",
+        "source_ip": "10.215.173.1",
+        "destination_ip": "8.8.8.8",
+        "raw1": "IP / TCP 10.215.173.1:34190 > 8.8.8.8:853 FA",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733228.844959",
+        "source_mac": "8.8.8.8",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "8.8.8.8",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 A",
+        "raw2": null
+    },
+    {
+        "timestamp": "1709733228.845520",
+        "source_mac": "8.8.8.8",
+        "destination_mac": "10.215.173.1",
+        "source_ip": "8.8.8.8",
+        "destination_ip": "10.215.173.1",
+        "raw1": "IP / TCP 8.8.8.8:853 > 10.215.173.1:34190 RA",
+        "raw2": null
+    }
+]
