@@ -1,4 +1,6 @@
 import json
+import re
+import datetime
 
 class MerossDeviceAnalyzer:
     def __init__(self, json_file):
@@ -20,8 +22,11 @@ class MerossDeviceAnalyzer:
                 # Check if payload is a string
                 elif isinstance(payload, str):
                     #print("Payload as string:", payload)
+                    timestamp = payload.find("timestamp")
                     onoff_index = payload.find("onoff")
                     if onoff_index != -1:
+                        unixTimestamp=int(re.search(r'"timestamp":(\d+)',str(payload)).group(1))
+                        print(datetime.datetime.fromtimestamp(unixTimestamp).strftime('%Y-%m-%d %H:%M:%S'))
                         # Look for the next integer after "onoff"
                         next_char_index = onoff_index + len("onoff")
                         while next_char_index < len(payload) and not payload[next_char_index].isdigit():
