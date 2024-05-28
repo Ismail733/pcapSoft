@@ -9,7 +9,6 @@ class MerossAnalyzer:
         self.packet_info_list = []
 
     def analyze_packets(self):
-        with PcapReader(self.file_path) as pcap_reader:
             for packet in pcap_reader:
                 src_mac = packet[Ether].src
                 dst_mac = packet[Ether].dst
