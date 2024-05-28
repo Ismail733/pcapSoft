@@ -1,14 +1,18 @@
-from scapy.all import *
+from scapy.all import sniff, Ether, IP, TCP, Raw, wrpcap
 import threading
 import keyboard
-
 import threading
-from scapy.all import sniff, wrpcap
+import json
+import matplotlib.pyplot as plt
+import time
 
 # Fonction pour capturer le trafic en arrière-plan
 class Capture:
-    def __init__(self):
+    def __init__(self, source_address, destination_address):
         self.captured_packets = None
+        self.source_address = source_address
+        self.destination_address = destination_address
+        self.packet_info_list = []
 
 
     def capture_traffic(self):
@@ -17,56 +21,85 @@ class Capture:
 
     # Fonction pour traiter et afficher les paquets capturés
     def process_packet(self, packet):
-        print(packet.summary())
+        print(packet)
         # Vous pouvez ajouter d'autres traitements ici si nécessaire
-        self.analyze_packets()
+        self.analyze_packets(packet)
         wrpcap("captured_packets.pcapng", packet, append=True)
         
-
     def analyze_packets(self,packet):
-        src_mac = packet[Ether].src
-        dst_mac = packet[Ether].dst
+        # Vérifier si le paquet a une couche Ethernet et IP
+        if packet.haslayer(Ether) and packet.haslayer(IP):
+        
+            src_mac = packet[Ether].src
+            dst_mac = packet[Ether].dst
 
-        if (src_mac == self.source_address or src_mac == self.destination_address) and (dst_mac == self.source_address or dst_mac == self.destination_address):
-            ethernet_info = {
-                "src_mac": src_mac,
-                "dst_mac": dst_mac
-            }
+            if (src_mac == self.source_address or src_mac == self.destination_address) and (dst_mac == self.source_address or dst_mac == self.destination_address):
+                ethernet_info = {
+                    "src_mac": src_mac,
+                    "dst_mac": dst_mac
+                }
 
-            ip_info = {}
-            if IP in packet:
                 ip_info = {
                     "src_ip": packet[IP].src,
                     "dst_ip": packet[IP].dst
                 }
 
-            tcp_info = {}
-            if TCP in packet:
-                tcp_info = {
-                    "src_port": packet[TCP].sport,
-                    "dst_port": packet[TCP].dport
-                }
+                tcp_info = {}
+                if TCP in packet:
+                    tcp_info = {
+                        "src_port": packet[TCP].sport,
+                        "dst_port": packet[TCP].dport
+                    }
 
-            # Check if Raw layer exists and it's not empty
-            if Raw in packet and packet[Raw].load:
-                try:
+                # Check if Raw layer exists and it's not empty
+                if Raw in packet and packet[Raw].load:
                     payload = json.loads(packet[Raw].load.decode('utf-8'))
-                except json.JSONDecodeError:
-                    payload = packet[Raw].load.decode('utf-8')
-            else:
-                payload = None
-
-            if payload is not None:  # Discard packets with no payload
-                packet_info = {
+                    packet_info = {
                     "ethernet": ethernet_info,
                     "ip": ip_info,
                     "tcp": tcp_info,
                     "payload": payload
-                }
-                self.packet_info_list.append(packet_info)
+                    }
+                    print(packet_info)
+
+                    # Check if payload is a dictionary
+                    if isinstance(payload, dict):
+                        dev_name = payload.get('devName')
+                        if dev_name and dev_name not in self.device_names:
+                            self.device_names.append(dev_name)
+                    # Check if payload is a string
+                    elif isinstance(payload, str):
+                        #print("Payload as string:", payload)
+                        onoff_index = payload.find("onoff")
+                        if onoff_index != -1:
+                            # Look for the next integer after "onoff"
+                            next_char_index = onoff_index + len("onoff")
+                            while next_char_index < len(payload) and not payload[next_char_index].isdigit():
+                                next_char_index += 1
+                            if next_char_index < len(payload):
+                                next_integer = ""
+                                while next_char_index < len(payload) and payload[next_char_index].isdigit():
+                                    next_integer += payload[next_char_index]
+                                    next_char_index += 1
+                                print("Next integer after 'onoff':", next_integer)
+                                self.onoff_history.append(int(next_integer))
+                                self.time_history.append(time.time() - self.time)
+                                self.plot_live_graph(self.time_history, self.onoff_history)
+
+    def plot_live_graph(self, x_data, y_data):
+        plt.clf()  # Effacer le graphique précédent
+        plt.step(x_data, y_data)  # Tracer le nouveau graphique
+        plt.xlabel('Temps')
+        plt.ylabel('On/Off')
+        plt.title('Graphique en temps réel')
+        plt.grid(True)
+        plt.pause(0.01)  # Pause pour actualiser le graphique
+
+source_address = 'aa:f9:24:38:27:e1'
+destination_address = '48:e1:e9:3a:3a:b7'
 
 # Créer une instance de la classe Capture
-capture = Capture()
+capture = Capture(source_address, destination_address)
 
 # Lancer la capture de trafic dans un thread
 capture_thread = threading.Thread(target=capture.capture_traffic)
@@ -85,38 +118,8 @@ keyboard.on_press(stop_capture)
 # Attendre indéfiniment jusqu'à ce que la touche "q" soit pressée
 keyboard.wait('q')
 
-sys.exit()
+# Enregistrer les paquets capturés dans un fichier PCAPNG
+print("Trafic capturé enregistré dans captured_packets.pcapng.")
 
 
-
-
-def analyze_packets(self, packet):
-        try:
-            payload = packet['payload']
-            # Check if payload is a dictionary
-            if isinstance(payload, dict):
-                dev_name = payload.get('devName')
-                if dev_name and dev_name not in self.device_names:
-                    self.device_names.append(dev_name)
-            # Check if payload is a string
-            elif isinstance(payload, str):
-                #print("Payload as string:", payload)
-                onoff_index = payload.find("onoff")
-                if onoff_index != -1:
-                    # Look for the next integer after "onoff"
-                    next_char_index = onoff_index + len("onoff")
-                    while next_char_index < len(payload) and not payload[next_char_index].isdigit():
-                        next_char_index += 1
-                    if next_char_index < len(payload):
-                        next_integer = ""
-                        while next_char_index < len(payload) and payload[next_char_index].isdigit():
-                            next_integer += payload[next_char_index]
-                            next_char_index += 1
-                        print("Next integer after 'onoff':", next_integer)
-                        self.onoff_history.append(int(next_integer))
-                        self.time_history.append(time.time() - self.time)
-                        self.plot_live_graph(self.time_history, self.onoff_history)
-
-                print('------')
-        except KeyError:
-            print("Error: field not found in the payload.")
+plt.show()
