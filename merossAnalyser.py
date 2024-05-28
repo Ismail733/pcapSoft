@@ -1,9 +1,14 @@
 import json
+import matplotlib.pyplot as plt
+import time
 
 class MerossDeviceAnalyzer:
     def __init__(self, json_file):
         self.json_file = json_file
         self.device_names = []
+        self.onoff_history = []
+        self.time_history = []
+        self.time = time.time()
 
     def analyze_packets(self):
         with open(self.json_file, 'r') as file:
@@ -32,6 +37,9 @@ class MerossDeviceAnalyzer:
                                 next_integer += payload[next_char_index]
                                 next_char_index += 1
                             print("Next integer after 'onoff':", next_integer)
+                            self.onoff_history.append(int(next_integer))
+                            self.time_history.append(time.time() - self.time)
+                            self.plot_live_graph(self.time_history, self.onoff_history)
                     print('------')
             except KeyError:
                 print("Error: field not found in the payload.")
@@ -40,8 +48,20 @@ class MerossDeviceAnalyzer:
         print("Unique Device Names:")
         for dev_name in self.device_names:
             print(dev_name)
+        # Fonction pour afficher le graphique en temps réel
+    
+    def plot_live_graph(self, x_data, y_data):
+        plt.clf()  # Effacer le graphique précédent
+        plt.step(x_data, y_data)  # Tracer le nouveau graphique
+        plt.xlabel('Temps')
+        plt.ylabel('On/Off')
+        plt.title('Graphique en temps réel')
+        plt.grid(True)
+        plt.pause(0.01)  # Pause pour actualiser le graphique
 
 # Usage
 analyzer = MerossDeviceAnalyzer("packet_info.json")
 analyzer.analyze_packets()
 analyzer.print_unique_device_names()
+
+plt.show()
