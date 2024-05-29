@@ -6,13 +6,15 @@ import json
 import matplotlib.pyplot as plt
 import time
 
-# Fonction pour capturer le trafic en arrière-plan
+# Classe qui capture les packets et les analyses puis display les résultats
 class Capture:
     def __init__(self, source_address, destination_address):
         self.captured_packets = None
         self.source_address = source_address
         self.destination_address = destination_address
-        self.packet_info_list = []
+        self.onoff_history = []
+        self.time_history = []
+        self.time = time.time()
 
 
     def capture_traffic(self):
@@ -26,6 +28,7 @@ class Capture:
         self.analyze_packets(packet)
         wrpcap("captured_packets.pcapng", packet, append=True)
         
+    # Fonction pour analyser les paquets capturés.
     def analyze_packets(self,packet):
         # Vérifier si le paquet a une couche Ethernet et IP
         if packet.haslayer(Ether) and packet.haslayer(IP):
@@ -33,6 +36,7 @@ class Capture:
             src_mac = packet[Ether].src
             dst_mac = packet[Ether].dst
 
+            # Vérifier si les adresses MAC source et destination correspondent à celles spécifiées
             if (src_mac == self.source_address or src_mac == self.destination_address) and (dst_mac == self.source_address or dst_mac == self.destination_address):
                 ethernet_info = {
                     "src_mac": src_mac,
@@ -53,15 +57,12 @@ class Capture:
 
                 # Check if Raw layer exists and it's not empty
                 if Raw in packet and packet[Raw].load:
-                    payload = json.loads(packet[Raw].load.decode('utf-8'))
-                    packet_info = {
-                    "ethernet": ethernet_info,
-                    "ip": ip_info,
-                    "tcp": tcp_info,
-                    "payload": payload
-                    }
-                    print(packet_info)
+                    try:
+                        payload = json.loads(packet[Raw].load.decode('utf-8'))
+                    except json.JSONDecodeError:
+                        payload = packet[Raw].load.decode('utf-8')
 
+                    # Pour la prise Meross, il y a deux type de packet, les dictionnaires avec le nom du device, et les string avec la valeur onoff de la prise
                     # Check if payload is a dictionary
                     if isinstance(payload, dict):
                         dev_name = payload.get('devName')
@@ -69,7 +70,6 @@ class Capture:
                             self.device_names.append(dev_name)
                     # Check if payload is a string
                     elif isinstance(payload, str):
-                        #print("Payload as string:", payload)
                         onoff_index = payload.find("onoff")
                         if onoff_index != -1:
                             # Look for the next integer after "onoff"
@@ -81,10 +81,32 @@ class Capture:
                                 while next_char_index < len(payload) and payload[next_char_index].isdigit():
                                     next_integer += payload[next_char_index]
                                     next_char_index += 1
-                                print("Next integer after 'onoff':", next_integer)
+                                packet_info = {
+                                "ethernet": ethernet_info,
+                                "ip": ip_info,
+                                "tcp": tcp_info,
+                                "payload": next_integer,
+                                "timestamp": str(packet.time),
+                                }
+                                print(packet_info)
                                 self.onoff_history.append(int(next_integer))
                                 self.time_history.append(time.time() - self.time)
                                 self.plot_live_graph(self.time_history, self.onoff_history)
+                    
+                    # Pour les packets google, on regarde si le payload contient connectivitycheck.gstatic.com
+                    raw_data=packet.show(dump=True)
+                    if raw_data is not None and "connectivitycheck.gstatic.com" in raw_data :
+                        packet_info = {
+                        "ethernet": ethernet_info,
+                        "ip": ip_info,
+                        "tcp": tcp_info,
+                        "payload": raw_data,
+                        "timestamp": str(packet.time),
+                        "raw_data" : raw_data
+                        }
+                        print(packet_info)
+                        
+
 
     def plot_live_graph(self, x_data, y_data):
         plt.clf()  # Effacer le graphique précédent
