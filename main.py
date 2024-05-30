@@ -1,4 +1,4 @@
-from scapy.all import sniff, Ether, IP, TCP, Raw, wrpcap
+from scapy.all import sniff, Ether, IP, TCP, Raw, wrpcap, DNS
 import threading
 import keyboard
 import threading
@@ -23,13 +23,17 @@ class Capture:
 
     # Fonction pour traiter et afficher les paquets capturés
     def process_packet(self, packet):
-        print(packet)
+        #print(packet)
         # Vous pouvez ajouter d'autres traitements ici si nécessaire
         self.analyze_packets(packet)
         wrpcap("captured_packets.pcapng", packet, append=True)
         
     # Fonction pour analyser les paquets capturés.
     def analyze_packets(self,packet):
+        # Regarder si le packet est une requête DNS et regarde le site accedé
+        if packet.haslayer(DNS) and packet.getlayer(DNS).qr == 0:  # DNS request
+            dns_layer = packet.getlayer(DNS)
+            print(f"DNS Request for {dns_layer.qd.qname.decode('utf-8')}")
         # Vérifier si le paquet a une couche Ethernet et IP
         if packet.haslayer(Ether) and packet.haslayer(IP):
         
