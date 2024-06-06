@@ -8,13 +8,12 @@ import time
 
 # Classe qui capture les packets et les analyses puis display les résultats
 class Capture:
-    def __init__(self, source_address, destination_address):
+    def __init__(self):
         self.captured_packets = None
-        self.source_address = source_address
-        self.destination_address = destination_address
         self.onoff_history = []
         self.time_history = []
         self.time = time.time()
+        self.device_names = []
 
 
     def capture_traffic(self):
@@ -35,80 +34,80 @@ class Capture:
             dns_layer = packet.getlayer(DNS)
             print(f"DNS Request for {dns_layer.qd.qname.decode('utf-8')}")
         # Vérifier si le paquet a une couche Ethernet et IP
-        if packet.haslayer(Ether) and packet.haslayer(IP):
+        elif packet.haslayer(Ether) and packet.haslayer(IP):
         
             src_mac = packet[Ether].src
             dst_mac = packet[Ether].dst
 
             # Vérifier si les adresses MAC source et destination correspondent à celles spécifiées
-            if (src_mac == self.source_address or src_mac == self.destination_address) and (dst_mac == self.source_address or dst_mac == self.destination_address):
-                ethernet_info = {
-                    "src_mac": src_mac,
-                    "dst_mac": dst_mac
+        
+            ethernet_info = {
+                "src_mac": src_mac,
+                "dst_mac": dst_mac
+            }
+
+            ip_info = {
+                "src_ip": packet[IP].src,
+                "dst_ip": packet[IP].dst
+            }
+
+            tcp_info = {}
+            if TCP in packet:
+                tcp_info = {
+                    "src_port": packet[TCP].sport,
+                    "dst_port": packet[TCP].dport
                 }
 
-                ip_info = {
-                    "src_ip": packet[IP].src,
-                    "dst_ip": packet[IP].dst
-                }
+            # Check if Raw layer exists and it's not empty
+            if Raw in packet and packet[Raw].load:
+                try:
+                    payload = json.loads(packet[Raw].load.decode('utf-8'))
+                except json.JSONDecodeError:
+                    payload = packet[Raw].load.decode('utf-8')
 
-                tcp_info = {}
-                if TCP in packet:
-                    tcp_info = {
-                        "src_port": packet[TCP].sport,
-                        "dst_port": packet[TCP].dport
-                    }
-
-                # Check if Raw layer exists and it's not empty
-                if Raw in packet and packet[Raw].load:
-                    try:
-                        payload = json.loads(packet[Raw].load.decode('utf-8'))
-                    except json.JSONDecodeError:
-                        payload = packet[Raw].load.decode('utf-8')
-
-                    # Pour la prise Meross, il y a deux type de packet, les dictionnaires avec le nom du device, et les string avec la valeur onoff de la prise
-                    # Check if payload is a dictionary
-                    if isinstance(payload, dict):
-                        dev_name = payload.get('devName')
-                        if dev_name and dev_name not in self.device_names:
-                            self.device_names.append(dev_name)
-                    # Check if payload is a string
-                    elif isinstance(payload, str):
-                        onoff_index = payload.find("onoff")
-                        if onoff_index != -1:
-                            # Look for the next integer after "onoff"
-                            next_char_index = onoff_index + len("onoff")
-                            while next_char_index < len(payload) and not payload[next_char_index].isdigit():
+                # Pour la prise Meross, il y a deux type de packet, les dictionnaires avec le nom du device, et les string avec la valeur onoff de la prise
+                # Check if payload is a dictionary
+                if isinstance(payload, dict):
+                    dev_name = payload.get('devName')
+                    if dev_name and dev_name not in self.device_names:
+                        self.device_names.append([dev_name,src_mac])
+                # Check if payload is a string
+                elif isinstance(payload, str):
+                    onoff_index = payload.find("onoff")
+                    if onoff_index != -1:
+                        # Look for the next integer after "onoff"
+                        next_char_index = onoff_index + len("onoff")
+                        while next_char_index < len(payload) and not payload[next_char_index].isdigit():
+                            next_char_index += 1
+                        if next_char_index < len(payload):
+                            next_integer = ""
+                            while next_char_index < len(payload) and payload[next_char_index].isdigit():
+                                next_integer += payload[next_char_index]
                                 next_char_index += 1
-                            if next_char_index < len(payload):
-                                next_integer = ""
-                                while next_char_index < len(payload) and payload[next_char_index].isdigit():
-                                    next_integer += payload[next_char_index]
-                                    next_char_index += 1
-                                packet_info = {
-                                "ethernet": ethernet_info,
-                                "ip": ip_info,
-                                "tcp": tcp_info,
-                                "payload": next_integer,
-                                "timestamp": str(packet.time),
-                                }
-                                print(packet_info)
-                                self.onoff_history.append(int(next_integer))
-                                self.time_history.append(time.time() - self.time)
-                                self.plot_live_graph(self.time_history, self.onoff_history)
-                    
-                    # Pour les packets google, on regarde si le payload contient connectivitycheck.gstatic.com
-                    raw_data=packet.show(dump=True)
-                    if raw_data is not None and "connectivitycheck.gstatic.com" in raw_data :
-                        packet_info = {
-                        "ethernet": ethernet_info,
-                        "ip": ip_info,
-                        "tcp": tcp_info,
-                        "payload": raw_data,
-                        "timestamp": str(packet.time),
-                        "raw_data" : raw_data
-                        }
-                        print(packet_info)
+                            packet_info = {
+                            "ethernet": ethernet_info,
+                            "ip": ip_info,
+                            "tcp": tcp_info,
+                            "payload": next_integer,
+                            "timestamp": str(packet.time),
+                            }
+                            print(packet_info)
+                            self.onoff_history.append(int(next_integer))
+                            self.time_history.append(time.time() - self.time)
+                            self.plot_live_graph(self.time_history, self.onoff_history)
+                
+                # Pour les packets google, on regarde si le payload contient connectivitycheck.gstatic.com
+                raw_data=packet.show(dump=True)
+                if raw_data is not None and "connectivitycheck.gstatic.com" in raw_data :
+                    packet_info = {
+                    "ethernet": ethernet_info,
+                    "ip": ip_info,
+                    "tcp": tcp_info,
+                    "payload": raw_data,
+                    "timestamp": str(packet.time),
+                    "raw_data" : raw_data
+                    }
+                    print(packet_info)
                         
 
 
@@ -146,6 +145,6 @@ keyboard.wait('q')
 
 # Enregistrer les paquets capturés dans un fichier PCAPNG
 print("Trafic capturé enregistré dans captured_packets.pcapng.")
-
+print("nombre d'appareil : ",len(capture.device_names))
 
 plt.show()
