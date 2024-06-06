@@ -55,6 +55,8 @@ class Capture:
             if b"HTTP/1.1" in payload or b"GET" in payload or b"POST" in payload:
                 # Pour la prise Meross, il y a deux type de packet, les dictionnaires avec le nom du device, et les string avec la valeur onoff de la prise
                 # Check if payload is a dictionary
+                if b"onoff" in payload:
+                    print("test")
                 try:
                     decoded_payload = payload.decode('utf-8')
                     
