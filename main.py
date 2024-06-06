@@ -20,7 +20,8 @@ class Capture:
 
     def capture_traffic(self):
         print("Capture de trafic en cours. Appuyez sur 'q' pour arrêter.")
-        self.captured_packets = sniff(prn=self.process_packet)
+        #iface = interface to hear - IMPORTANT this value should be addapted to your system!
+        self.captured_packets = sniff(iface="wlp166s0", prn=self.process_packet)
 
     # Fonction pour traiter et afficher les paquets capturés
     def process_packet(self, packet):
@@ -55,8 +56,6 @@ class Capture:
             if b"HTTP/1.1" in payload or b"GET" in payload or b"POST" in payload:
                 # Pour la prise Meross, il y a deux type de packet, les dictionnaires avec le nom du device, et les string avec la valeur onoff de la prise
                 # Check if payload is a dictionary
-                if b"onoff" in payload:
-                    print("test")
                 try:
                     decoded_payload = payload.decode('utf-8')
                     
@@ -67,7 +66,6 @@ class Capture:
                     
                     # Check if decoded_payload is a string
                     elif isinstance(decoded_payload, str):
-                        print("ok")
                         onoff_index = decoded_payload.find("onoff")
                         if onoff_index != -1:
                             # Look for the next integer after "onoff"
@@ -93,18 +91,18 @@ class Capture:
                 except UnicodeDecodeError:
                     print("Error: cannot decode the payload.")               
                     
-                # Pour les packets google, on regarde si le payload contient connectivitycheck.gstatic.com
-                raw_data=packet.show(dump=True)
-                if raw_data is not None and "connectivitycheck.gstatic.com" in raw_data :
-                    packet_info = {
-                    "ethernet": ethernet_info,
-                    "ip": ip_info,
-                    "tcp": tcp_info,
-                    "payload": raw_data,
-                    "timestamp": str(packet.time),
-                    "raw_data" : raw_data
-                    }
-                    print(packet_info)
+            # Pour les packets google, on regarde si le payload contient connectivitycheck.gstatic.com
+            raw_data=packet.show(dump=True)
+            if raw_data is not None and "connectivitycheck.gstatic.com" in raw_data :
+                packet_info = {
+                "ethernet": ethernet_info,
+                "ip": ip_info,
+                "tcp": tcp_info,
+                "payload": raw_data,
+                "timestamp": str(packet.time),
+                "raw_data" : raw_data
+                }
+                #print(packet_info)
                     
 
 
@@ -115,7 +113,8 @@ class Capture:
         plt.ylabel('On/Off')
         plt.title('Graphique en temps réel')
         plt.grid(True)
-        plt.pause(0.01)  # Pause pour actualiser le graphique
+        print("ok")
+        plt.pause(0.001)
 
 source_address = 'aa:f9:24:38:27:e1'
 destination_address = '48:e1:e9:3a:3a:b7'
@@ -124,9 +123,11 @@ destination_address = '48:e1:e9:3a:3a:b7'
 capture = Capture(source_address, destination_address)
 
 # Lancer la capture de trafic dans un thread
-capture_thread = threading.Thread(target=capture.capture_traffic)
-capture_thread.daemon = True
-capture_thread.start()
+#capture_thread = threading.Thread(target=capture.capture_traffic)
+#capture_thread.daemon = True
+#capture_thread.start()
+
+capture.capture_traffic()
 
 # Fonction pour arrêter la capture de trafic lorsque la touche "q" est pressée
 def stop_capture(e):
@@ -135,13 +136,13 @@ def stop_capture(e):
         capture_thread.join()
         
 # Associer la fonction stop_capture à la pression de la touche "q"
-keyboard.on_press(stop_capture)
+#keyboard.on_press(stop_capture)
 
 # Attendre indéfiniment jusqu'à ce que la touche "q" soit pressée
-keyboard.wait('q')
+#keyboard.wait('q')
 
 # Enregistrer les paquets capturés dans un fichier PCAPNG
 print("Trafic capturé enregistré dans captured_packets.pcapng.")
 print("nombre d'appareil :" , len(capture.device_names))
 
-plt.show()
+#plt.show()
