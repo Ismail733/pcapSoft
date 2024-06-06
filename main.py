@@ -118,7 +118,7 @@ class Capture:
         plt.ylabel('On/Off')
         plt.title('Graphique en temps réel')
         plt.grid(True)
-        plt.pause(0.01)  # Pause pour actualiser le graphique
+        # Pause pour actualiser le graphique
 
 source_address = 'aa:f9:24:38:27:e1'
 destination_address = '48:e1:e9:3a:3a:b7'
