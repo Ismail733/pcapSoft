@@ -8,8 +8,10 @@ import time
 
 # Classe qui capture les packets et les analyses puis display les résultats
 class Capture:
-    def __init__(self):
+    def __init__(self, source_address, destination_address):
         self.captured_packets = None
+        self.source_address = source_address
+        self.destination_address = destination_address
         self.onoff_history = []
         self.time_history = []
         self.time = time.time()
@@ -57,58 +59,59 @@ class Capture:
                     "src_port": packet[TCP].sport,
                     "dst_port": packet[TCP].dport
                 }
+                payload = bytes(packet[TCP].payload)
+                if b"HTTP/1.1" in payload or b"GET" in payload or b"POST" in payload:
+                    try:
+                        # Essayer de décoder le payload en JSON
+                        payl = payload.decode('utf-8')
+                        print("ok")
+                    except:
+                        pass
 
-            # Check if Raw layer exists and it's not empty
-            if Raw in packet and packet[Raw].load:
-                try:
-                    payload = json.loads(packet[Raw].load.decode('utf-8'))
-                except json.JSONDecodeError:
-                    payload = packet[Raw].load.decode('utf-8')
-
-                # Pour la prise Meross, il y a deux type de packet, les dictionnaires avec le nom du device, et les string avec la valeur onoff de la prise
-                # Check if payload is a dictionary
-                if isinstance(payload, dict):
-                    dev_name = payload.get('devName')
-                    if dev_name and dev_name not in self.device_names:
-                        self.device_names.append([dev_name,src_mac])
-                # Check if payload is a string
-                elif isinstance(payload, str):
-                    onoff_index = payload.find("onoff")
-                    if onoff_index != -1:
-                        # Look for the next integer after "onoff"
-                        next_char_index = onoff_index + len("onoff")
-                        while next_char_index < len(payload) and not payload[next_char_index].isdigit():
-                            next_char_index += 1
-                        if next_char_index < len(payload):
-                            next_integer = ""
-                            while next_char_index < len(payload) and payload[next_char_index].isdigit():
-                                next_integer += payload[next_char_index]
+                    # Pour la prise Meross, il y a deux type de packet, les dictionnaires avec le nom du device, et les string avec la valeur onoff de la prise
+                    # Check if payload is a dictionary
+                    if isinstance(payl, dict):
+                        dev_name = payl.get('devName')
+                        if dev_name and dev_name not in self.device_names:
+                            self.device_names.append(dev_name)
+                    # Check if payload is a string
+                    elif isinstance(payl, str):
+                        onoff_index = payl.find("onoff")
+                        if onoff_index != -1:
+                            # Look for the next integer after "onoff"
+                            next_char_index = onoff_index + len("onoff")
+                            while next_char_index < len(payl) and not payl[next_char_index].isdigit():
                                 next_char_index += 1
-                            packet_info = {
-                            "ethernet": ethernet_info,
-                            "ip": ip_info,
-                            "tcp": tcp_info,
-                            "payload": next_integer,
-                            "timestamp": str(packet.time),
-                            }
-                            print(packet_info)
-                            self.onoff_history.append(int(next_integer))
-                            self.time_history.append(time.time() - self.time)
-                            self.plot_live_graph(self.time_history, self.onoff_history)
-                
-                # Pour les packets google, on regarde si le payload contient connectivitycheck.gstatic.com
-                raw_data=packet.show(dump=True)
-                if raw_data is not None and "connectivitycheck.gstatic.com" in raw_data :
-                    packet_info = {
-                    "ethernet": ethernet_info,
-                    "ip": ip_info,
-                    "tcp": tcp_info,
-                    "payload": raw_data,
-                    "timestamp": str(packet.time),
-                    "raw_data" : raw_data
-                    }
-                    print(packet_info)
-                        
+                            if next_char_index < len(payl):
+                                next_integer = ""
+                                while next_char_index < len(payl) and payl[next_char_index].isdigit():
+                                    next_integer += payl[next_char_index]
+                                    next_char_index += 1
+                                packet_info = {
+                                "ethernet": ethernet_info,
+                                "ip": ip_info,
+                                "tcp": tcp_info,
+                                "payload": next_integer,
+                                "timestamp": str(packet.time),
+                                }
+                                print(packet_info)
+                                self.onoff_history.append(int(next_integer))
+                                self.time_history.append(time.time() - self.time)
+                                self.plot_live_graph(self.time_history, self.onoff_history)
+                    
+                    # Pour les packets google, on regarde si le payload contient connectivitycheck.gstatic.com
+                    raw_data=packet.show(dump=True)
+                    if raw_data is not None and "connectivitycheck.gstatic.com" in raw_data :
+                        packet_info = {
+                        "ethernet": ethernet_info,
+                        "ip": ip_info,
+                        "tcp": tcp_info,
+                        "payload": raw_data,
+                        "timestamp": str(packet.time),
+                        "raw_data" : raw_data
+                        }
+                        print(packet_info)
+                    
 
 
     def plot_live_graph(self, x_data, y_data):
@@ -118,7 +121,7 @@ class Capture:
         plt.ylabel('On/Off')
         plt.title('Graphique en temps réel')
         plt.grid(True)
-        # Pause pour actualiser le graphique
+        plt.pause(0.01)  # Pause pour actualiser le graphique
 
 source_address = 'aa:f9:24:38:27:e1'
 destination_address = '48:e1:e9:3a:3a:b7'
@@ -145,6 +148,6 @@ keyboard.wait('q')
 
 # Enregistrer les paquets capturés dans un fichier PCAPNG
 print("Trafic capturé enregistré dans captured_packets.pcapng.")
-print("nombre d'appareil : ",len(capture.device_names))
+print("nombre d'appareil :" , len(capture.device_names))
 
 plt.show()
