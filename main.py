@@ -1,8 +1,4 @@
-from scapy.all import sniff, Ether, IP, TCP, Raw, wrpcap, DNS
-import threading
-import keyboard
-import threading
-import json
+from scapy.all import sniff, Ether, IP, TCP, wrpcap, DNS
 import matplotlib.pyplot as plt
 import time
 
@@ -17,15 +13,14 @@ class Capture:
         self.time = time.time()
         self.device_names = []
 
-
     def capture_traffic(self):
-        print("Capture de trafic en cours. Appuyez sur 'q' pour arrêter.")
-        #iface = interface to hear - IMPORTANT this value should be addapted to your system!
+        print("Capture de trafic en cours.")
+        #iface = interface pour sniff - IMPORTANT cette valeur doit etre changer pour l'ordinateur specifique
         self.captured_packets = sniff(iface="wlp166s0", prn=self.process_packet)
 
     # Fonction pour traiter et afficher les paquets capturés
     def process_packet(self, packet):
-        #print(packet)
+        # print(packet)
         # Vous pouvez ajouter d'autres traitements ici si nécessaire
         self.analyze_packets(packet)
         wrpcap("captured_packets.pcapng", packet, append=True)
@@ -58,12 +53,10 @@ class Capture:
                 # Check if payload is a dictionary
                 try:
                     decoded_payload = payload.decode('utf-8')
-                    
                     if isinstance(decoded_payload, dict):
                         dev_name = decoded_payload.get('devName')
                         if dev_name and dev_name not in self.device_names:
                             self.device_names.append(dev_name)
-                    
                     # Check if decoded_payload is a string
                     elif isinstance(decoded_payload, str):
                         onoff_index = decoded_payload.find("onoff")
@@ -89,8 +82,7 @@ class Capture:
                                 self.time_history.append(time.time() - self.time)
                                 self.plot_live_graph(self.time_history, self.onoff_history)
                 except UnicodeDecodeError:
-                    print("Error: cannot decode the payload.")               
-                    
+                    print("Error: cannot decode the payload.")
             # Pour les packets google, on regarde si le payload contient connectivitycheck.gstatic.com
             raw_data=packet.show(dump=True)
             if raw_data is not None and "connectivitycheck.gstatic.com" in raw_data :
@@ -100,11 +92,7 @@ class Capture:
                 "tcp": tcp_info,
                 "payload": raw_data,
                 "timestamp": str(packet.time),
-                "raw_data" : raw_data
-                }
-                #print(packet_info)
-                    
-
+                "raw_data" : raw_data}
 
     def plot_live_graph(self, x_data, y_data):
         plt.clf()  # Effacer le graphique précédent
@@ -113,36 +101,18 @@ class Capture:
         plt.ylabel('On/Off')
         plt.title('Graphique en temps réel')
         plt.grid(True)
-        print("ok")
         plt.pause(0.001)
 
+#adresse de tout les objets connectees du vondeur Chengdu ont l'adresse Mac qui commence par 48:e1:e9
 source_address = 'aa:f9:24:38:27:e1'
 destination_address = '48:e1:e9:3a:3a:b7'
 
 # Créer une instance de la classe Capture
 capture = Capture(source_address, destination_address)
 
-# Lancer la capture de trafic dans un thread
-#capture_thread = threading.Thread(target=capture.capture_traffic)
-#capture_thread.daemon = True
-#capture_thread.start()
-
+# Lancer la capture de trafic
 capture.capture_traffic()
-
-# Fonction pour arrêter la capture de trafic lorsque la touche "q" est pressée
-def stop_capture(e):
-    if e.name == 'q':
-        print("Arrêt de la capture de trafic...")
-        capture_thread.join()
         
-# Associer la fonction stop_capture à la pression de la touche "q"
-#keyboard.on_press(stop_capture)
-
-# Attendre indéfiniment jusqu'à ce que la touche "q" soit pressée
-#keyboard.wait('q')
-
 # Enregistrer les paquets capturés dans un fichier PCAPNG
 print("Trafic capturé enregistré dans captured_packets.pcapng.")
 print("nombre d'appareil :" , len(capture.device_names))
-
-#plt.show()
