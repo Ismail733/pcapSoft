@@ -1,17 +1,11 @@
 from scapy.all import sniff, Ether, IP, TCP, Raw, wrpcap, DNS
-import threading
-import keyboard
-import threading
-import json
 import matplotlib.pyplot as plt
 import time
 
 # Classe qui capture les packets et les analyses puis display les résultats
 class Capture:
-    def __init__(self, source_address, destination_address):
+    def __init__(self):
         self.captured_packets = None
-        self.source_address = source_address
-        self.destination_address = destination_address
         self.onoff_history = []
         self.time_history = []
         self.time = time.time()
@@ -19,9 +13,8 @@ class Capture:
 
 
     def capture_traffic(self):
-        print("Capture de trafic en cours. Appuyez sur 'q' pour arrêter.")
         #iface = interface to hear - IMPORTANT this value should be addapted to your system!
-        self.captured_packets = sniff(iface="wlp166s0", prn=self.process_packet)
+        self.captured_packets = sniff(iface="wlp6s0", prn=self.process_packet)
 
     # Fonction pour traiter et afficher les paquets capturés
     def process_packet(self, packet):
@@ -54,11 +47,10 @@ class Capture:
             }
             payload = bytes(packet[TCP].payload)
             if b"HTTP/1.1" in payload or b"GET" in payload or b"POST" in payload:
-                # Pour la prise Meross, il y a deux type de packet, les dictionnaires avec le nom du device, et les string avec la valeur onoff de la prise
-                # Check if payload is a dictionary
                 try:
                     decoded_payload = payload.decode('utf-8')
-                    
+                    # Pour la prise Meross, il y a deux type de packet, les dictionnaires avec le nom du device, et les string avec la valeur onoff de la prise
+                    # Check if payload is a dictionary
                     if isinstance(decoded_payload, dict):
                         dev_name = decoded_payload.get('devName')
                         if dev_name and dev_name not in self.device_names:
@@ -88,6 +80,8 @@ class Capture:
                                 self.onoff_history.append(int(next_integer))
                                 self.time_history.append(time.time() - self.time)
                                 self.plot_live_graph(self.time_history, self.onoff_history)
+                    else:
+                        print(payload)
                 except UnicodeDecodeError:
                     print("Error: cannot decode the payload.")               
                     
@@ -102,9 +96,7 @@ class Capture:
                 "timestamp": str(packet.time),
                 "raw_data" : raw_data
                 }
-                #print(packet_info)
-                    
-
+                print(packet_info) 
 
     def plot_live_graph(self, x_data, y_data):
         plt.clf()  # Effacer le graphique précédent
@@ -116,33 +108,10 @@ class Capture:
         print("ok")
         plt.pause(0.001)
 
-source_address = 'aa:f9:24:38:27:e1'
-destination_address = '48:e1:e9:3a:3a:b7'
-
 # Créer une instance de la classe Capture
-capture = Capture(source_address, destination_address)
+capture = Capture()
 
-# Lancer la capture de trafic dans un thread
-#capture_thread = threading.Thread(target=capture.capture_traffic)
-#capture_thread.daemon = True
-#capture_thread.start()
-
+#Lance la capture dans le main thread pour éviter les erreurs matplotlib
 capture.capture_traffic()
 
-# Fonction pour arrêter la capture de trafic lorsque la touche "q" est pressée
-def stop_capture(e):
-    if e.name == 'q':
-        print("Arrêt de la capture de trafic...")
-        capture_thread.join()
-        
-# Associer la fonction stop_capture à la pression de la touche "q"
-#keyboard.on_press(stop_capture)
-
-# Attendre indéfiniment jusqu'à ce que la touche "q" soit pressée
-#keyboard.wait('q')
-
-# Enregistrer les paquets capturés dans un fichier PCAPNG
-print("Trafic capturé enregistré dans captured_packets.pcapng.")
-print("nombre d'appareil :" , len(capture.device_names))
-
-#plt.show()
+plt.show()
