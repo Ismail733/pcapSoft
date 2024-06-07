@@ -23,4 +23,8 @@ Pour tout faire fonctionner main.py un ordinateur doit être utilisé comme "box
 Pour utiliser le merossReader.py vous pouvez utiliser le fichier crée par direct-scrap.py ou enregistrer par wireshark, veillez a bien préciser les bonnes adresses MAC pour le filtrage des paquets.
 
 ## Contributeurs
-Ismail SEBBAHI, Ahmed ZGHAL, Wolfgang WALTER, Aurélien MICHEL, Lucas MURAILLE.
+- [Lucas MURAILLE](https://www.linkedin.com/in/lucas-muraille-cs/)
+- [Ismail SEBBAHI](https://www.linkedin.com/in/ismail-sebbahi/)
+- [Wolfgang WALTER](https://www.linkedin.com/in/wolfgang-walter-cs)
+- Ahmed ZGHAL
+- [Aurélien MICHEL](https://www.linkedin.com/in/aur%C3%A9lien-michel-961077254/)
