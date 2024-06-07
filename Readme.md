@@ -6,14 +6,14 @@ Ces codes ont pour but de reconnaître les appareils IOT sur un reseaux et de me
 
 ## Les fichiers
 
-- main1.py #Le fichier autonome à lancer avec les droits administrateur (sudo sous linux) qui capture les packets et les analyses et affiche les résultats pour la prise.
+- main1.py Le fichier autonome à lancer avec les droits administrateur (sudo sous linux) qui capture les packets et les analyses et affiche les résultats pour la prise.
 
 
-- direct-scrap.py #Ce fichier fait la capture des packets les affiches et enregistre dans le fichier captured_packets.pcapng . Peut-être arreté en appuyant sur 'q'.
+- direct-scrap.py Ce fichier fait la capture des packets les affiches et enregistre dans le fichier captured_packets.pcapng . Peut-être arreté en appuyant sur 'q'.
 
-- MerossReader.py #Prend un fichier pcapng en entrée et sort un fichier json avec les paquets meross. Utilise les adresses MAC pour filtrer les messages contrairement a main.py qui vérifie que c'est une requête HTTP.
+- MerossReader.py Prend un fichier pcapng en entrée et sort un fichier json avec les paquets meross. Utilise les adresses MAC pour filtrer les messages contrairement a main.py qui vérifie que c'est une requête HTTP.
 
-- MerossAnalyser.py #Récupére le fichier json généré par MerossReader, analyse l'état de la prise et les affiches dans un graphique.
+- MerossAnalyser.py Récupére le fichier json généré par MerossReader, analyse l'état de la prise et les affiches dans un graphique.
 
 
 ## Utilisation
