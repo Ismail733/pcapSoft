@@ -13,12 +13,11 @@ class Capture:
 
 
     def capture_traffic(self):
-        #iface = interface to hear - IMPORTANT this value should be addapted to your system!
+        # Capture les packets sur l'interface wlp6s0
         self.captured_packets = sniff(iface="wlp6s0", prn=self.process_packet)
 
     # Fonction pour traiter et afficher les paquets capturés
     def process_packet(self, packet):
-        #print(packet)
         # Vous pouvez ajouter d'autres traitements ici si nécessaire
         self.analyze_packets(packet)
         wrpcap("captured_packets.pcapng", packet, append=True)
@@ -50,17 +49,17 @@ class Capture:
                 try:
                     decoded_payload = payload.decode('utf-8')
                     # Pour la prise Meross, il y a deux type de packet, les dictionnaires avec le nom du device, et les string avec la valeur onoff de la prise
-                    # Check if payload is a dictionary
+                    # Regarde si le payload est un dictionnaire
                     if isinstance(decoded_payload, dict):
                         dev_name = decoded_payload.get('devName')
                         if dev_name and dev_name not in self.device_names:
                             self.device_names.append(dev_name)
                     
-                    # Check if decoded_payload is a string
+                    # Regarde si le payload est un string
                     elif isinstance(decoded_payload, str):
                         onoff_index = decoded_payload.find("onoff")
                         if onoff_index != -1:
-                            # Look for the next integer after "onoff"
+                            # Trouver le prochain entier après "onoff"
                             next_char_index = onoff_index + len("onoff")
                             while next_char_index < len(decoded_payload) and not decoded_payload[next_char_index].isdigit():
                                 next_char_index += 1
@@ -96,7 +95,6 @@ class Capture:
                 "timestamp": str(packet.time),
                 "raw_data" : raw_data
                 }
-                print(packet_info) 
 
     def plot_live_graph(self, x_data, y_data):
         plt.clf()  # Effacer le graphique précédent
@@ -105,7 +103,6 @@ class Capture:
         plt.ylabel('On/Off')
         plt.title('Graphique en temps réel')
         plt.grid(True)
-        print("ok")
         plt.pause(0.001)
 
 # Créer une instance de la classe Capture
